@@ -29,11 +29,11 @@ const buttonMotionConfig = {
 
 export default function Layout() {
     return (
-        <div className="flex flex-col items-center justify-center h-screen">
+        <div className="flex flex-col items-center justify-center min-h-screen">
             <HeroHighlight className="flex flex-col items-center justify-center h-full">
                 <motion.h1
                     {...motionConfig}
-                    className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto mb-4"
+                    className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto mb-4 flex flex-wrap justify-center"
                 >
                     Hi! I am{' '}
                     <Highlight className="text-black dark:text-white">
@@ -43,7 +43,7 @@ export default function Layout() {
                 </motion.h1>
                 <motion.p
                     {...motionConfig}
-                    className="text-l px-4 md:text-l lg:text-xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto mb-4"
+                    className="text-l md:text-xl lg:text-2xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto mb-4"
                 >
                     A passionate software developer committed to creating
                     efficient and innovative solutions. Constantly learning and
@@ -56,7 +56,7 @@ export default function Layout() {
                 >
                     <motion.button
                         {...buttonMotionConfig}
-                        className="p-[3px] relative"
+                        className="p-[3px] md:p-3 relative"
                     >
                         <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 rounded-lg" />
                         <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-black dark:hover:text-black">
