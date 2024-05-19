@@ -29,40 +29,37 @@ const buttonMotionConfig = {
 
 export default function Layout() {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen">
-            <HeroHighlight className="flex flex-col items-center justify-center h-full">
-                <motion.h1
-                    {...motionConfig}
-                    className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto mb-4 flex flex-wrap justify-center"
-                >
-                    Hi! I am{' '}
-                    <Highlight className="text-black dark:text-white">
-                        Tomás Agustín Matteozzi
-                    </Highlight>
-                    !
-                </motion.h1>
-                <motion.p
-                    {...motionConfig}
-                    className="text-l md:text-xl lg:text-2xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto mb-4"
-                >
-                    A passionate software developer committed to creating
-                    efficient and innovative solutions. Constantly learning and
-                    evolving, I bring a diverse set of skills to each project,
-                    enabling me to deliver high-quality, scalable applications.
-                </motion.p>
-                <motion.div
-                    {...motionConfig}
-                    className="flex justify-center mt-4"
-                >
-                    <motion.button
-                        {...buttonMotionConfig}
-                        className="p-[3px] md:p-3 relative"
+        <div className="flex flex-col items-center h-screen">
+            <HeroHighlight className="h-full flex flex-col justify-center items-center">
+                <motion.div {...motionConfig} className="text-center">
+                    <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-4">
+                        Hi! I am <br className="md:hidden" />
+                        <Highlight className="text-black dark:text-white inline">
+                            Tomás Agustín Matteozzi
+                        </Highlight>
+                        !
+                    </div>
+                    <p className="text-l md:text-xl lg:text-xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-4">
+                        A passionate software developer committed to creating
+                        efficient and innovative solutions. Constantly learning
+                        and evolving, I bring a diverse set of skills to each
+                        project, enabling me to deliver high-quality, scalable
+                        applications.
+                    </p>
+                    <motion.div
+                        {...motionConfig}
+                        className="flex justify-center"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 rounded-lg" />
-                        <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-black dark:hover:text-black">
-                            CV
-                        </div>
-                    </motion.button>
+                        <motion.button
+                            {...buttonMotionConfig}
+                            className="p-[3px] relative"
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 rounded-lg" />
+                            <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-black dark:hover:text-black">
+                                CV
+                            </div>
+                        </motion.button>
+                    </motion.div>
                 </motion.div>
             </HeroHighlight>
         </div>
