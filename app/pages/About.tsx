@@ -51,7 +51,7 @@ export default function About() {
         }
     ];
     return (
-        <section id="about" className="flex flex-col items-center py-8">
+        <section id="about" className="flex flex-col items-center pt-8 pb-16">
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-16 text-center">
                 About me
             </h1>

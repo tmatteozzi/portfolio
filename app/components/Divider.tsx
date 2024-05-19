@@ -1,0 +1,3 @@
+export default function Divider() {
+    return <div className="w-100 px-10 mx-auto h-px bg-gray-300 mb-4" />;
+}

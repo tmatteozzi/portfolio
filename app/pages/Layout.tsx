@@ -29,8 +29,8 @@ const buttonMotionConfig = {
 
 export default function Layout() {
     return (
-        <section id="layout" className=" h-screen">
-            <HeroHighlight className="h-full flex flex-col justify-center items-center">
+        <section id="layout" className="">
+            <HeroHighlight className="flex flex-col justify-center items-center">
                 <motion.div {...motionConfig} className="text-center">
                     <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-4">
                         Hi! I am <br className="md:hidden" />

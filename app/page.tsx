@@ -1,3 +1,4 @@
+import Divider from './components/Divider';
 import Navbar from './components/Navbar';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -10,7 +11,9 @@ export default function Home() {
         <div>
             <Navbar />
             <Layout />
+            <Divider />
             <About />
+            <Divider />
             <Portfolio />
             <Skills />
             <Contact />
