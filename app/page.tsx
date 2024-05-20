@@ -15,7 +15,9 @@ export default function Home() {
             <About />
             <Divider />
             <Portfolio />
+            <Divider />
             <Skills />
+            <Divider />
             <Contact />
         </div>
     );
