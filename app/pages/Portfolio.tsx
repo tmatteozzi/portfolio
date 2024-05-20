@@ -1,6 +1,6 @@
 import { HeroParallax } from '../components/ui/hero-parallax';
-import ml from '../assets/ml.png';
-import gca from '../assets/gca.png';
+import ml from '../assets/projects/ml.png';
+import gca from '../assets/projects/gca.png';
 
 export default function Portfolio() {
     const products = [
