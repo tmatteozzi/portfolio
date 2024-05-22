@@ -1,9 +1,11 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [showNavbar, setShowNavbar] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     const navItems = [
         {
@@ -24,8 +26,31 @@ export default function Navbar() {
         }
     ];
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                setShowNavbar(false);
+            } else {
+                setShowNavbar(true);
+            }
+            setLastScrollY(window.scrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollY]);
+
     return (
-        <nav className="bg-gray-50 shadow-sm px-2 py-1.5 border-b border-gray-200">
+        <nav
+            className={`bg-gray-50 shadow-sm px-2 py-1.5 border-b border-gray-200 fixed top-0 w-full z-50 transition-transform duration-300 ${
+                showNavbar
+                    ? 'transform translate-y-0'
+                    : 'transform -translate-y-full'
+            }`}
+        >
             <div className="flex justify-between items-center">
                 <div className="ml-4 flex items-center space-x-4">
                     <button
