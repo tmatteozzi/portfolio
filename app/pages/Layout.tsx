@@ -31,7 +31,7 @@ export default function Layout() {
     return (
         <section
             id="layout"
-            className="h-full flex flex-col items-center justify-center"
+            className="flex flex-col items-center justify-center"
         >
             <HeroHighlight className="flex flex-col justify-center items-center">
                 <motion.div {...motionConfig} className="text-center">
@@ -59,7 +59,7 @@ export default function Layout() {
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 rounded-lg" />
                             <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-black dark:hover:text-black">
-                                CV
+                                Download Resume
                             </div>
                         </motion.button>
                     </motion.div>
