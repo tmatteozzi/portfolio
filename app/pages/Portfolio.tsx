@@ -51,5 +51,9 @@ export default function Portfolio() {
         }
     ];
     // USAR HERO PARALLAX
-    return <HeroParallax products={products} />;
+    return (
+        <section id="portfolio">
+            <HeroParallax products={products} />
+        </section>
+    );
 }

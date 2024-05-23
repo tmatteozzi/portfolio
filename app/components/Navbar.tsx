@@ -17,8 +17,8 @@ export default function Navbar() {
             link: '#portfolio'
         },
         {
-            name: 'Skills',
-            link: '#skills'
+            name: 'Technologies',
+            link: '#tech-stack'
         },
         {
             name: 'Experience',
