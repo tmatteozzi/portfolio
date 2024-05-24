@@ -57,9 +57,9 @@ export default function Contact() {
             return; // Prevent form submission
         }
 
-        const serviceId = 'service_9hwd8n9';
-        const templateId = 'template_65x3wfc';
-        const publicKey = 'F7o1xyqItrAmPmr6_';
+        const serviceId = process.env.SERVICE_ID!;
+        const templateId = process.env.TEMPLATE_ID!;
+        const publicKey = process.env.PUBLIC_KEY!;
 
         const templateParams = {
             from_name: formData.name,
