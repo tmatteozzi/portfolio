@@ -27,16 +27,35 @@ export default function Contact() {
     });
 
     const [response, setResponse] = useState<string | null>(null);
+    const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
         const { name, value } = e.target;
         setFormData((prevState) => ({ ...prevState, [name]: value }));
+        // Clear error message when user starts typing again
+        setErrors((prevErrors) => ({ ...prevErrors, [name]: '' }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (
+        e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+    ) => {
         e.preventDefault();
+
+        // Check for empty fields
+        const newErrors: { [key: string]: string } = {};
+        Object.entries(formData).forEach(([key, value]) => {
+            if (value.trim() === '') {
+                newErrors[key] = 'Please fill out this field';
+            }
+        });
+
+        if (Object.keys(newErrors).length > 0) {
+            // If there are errors, set the state to display them
+            setErrors(newErrors);
+            return; // Prevent form submission
+        }
 
         const serviceId = 'service_9hwd8n9';
         const templateId = 'template_65x3wfc';
@@ -79,8 +98,10 @@ export default function Contact() {
             </h1>
             <div>
                 <form
-                    onSubmit={handleSubmit}
                     className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto p-4 bg-white"
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                    }}
                 >
                     <div className="mb-4 text-left">
                         <label className={labelStyles}>Name:</label>
@@ -92,6 +113,11 @@ export default function Contact() {
                             required
                             className={`${inputStyles} ${inputHoverStyles}`}
                         />
+                        {errors.name && (
+                            <p className="text-sm text-red-500">
+                                {errors.name}
+                            </p>
+                        )}
                     </div>
                     <div className="mb-4 text-left">
                         <label className={labelStyles}>Email:</label>
@@ -103,6 +129,11 @@ export default function Contact() {
                             required
                             className={`${inputStyles} ${inputHoverStyles}`}
                         />
+                        {errors.email && (
+                            <p className="text-sm text-red-500">
+                                {errors.email}
+                            </p>
+                        )}
                     </div>
                     <div className="mb-4 text-left">
                         <label className={labelStyles}>Message:</label>
@@ -113,9 +144,15 @@ export default function Contact() {
                             required
                             className={`${textareaStyles} ${inputHoverStyles}`}
                         />
+                        {errors.message && (
+                            <p className="text-sm text-red-500">
+                                {errors.message}
+                            </p>
+                        )}
                     </div>
                     <div className="flex justify-center">
                         <motion.button
+                            onClick={handleSubmit}
                             {...buttonMotionConfig}
                             className="p-[3px] relative"
                         >

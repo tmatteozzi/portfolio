@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { HeroHighlight, Highlight } from '../components/ui/hero-highlight';
+import { Highlight } from '../components/ui/highlight';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const motionConfig = {
@@ -34,7 +34,7 @@ export default function Layout() {
             id="layout"
             className="flex flex-col items-center justify-center h-[calc(100vh-60px)] mt-[60px]"
         >
-            <HeroHighlight className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center">
                 <motion.div {...motionConfig} className="text-center">
                     <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-4">
                         Hi! I am <br className="md:hidden" />
@@ -84,7 +84,7 @@ export default function Layout() {
                         </div>
                     </motion.div>
                 </motion.div>
-            </HeroHighlight>
+            </div>
         </section>
     );
 }
