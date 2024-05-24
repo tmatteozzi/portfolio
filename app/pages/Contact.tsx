@@ -65,7 +65,9 @@ export default function Contact() {
     };
 
     const inputStyles =
-        'shadow-inner appearance-none bg-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-gray-300';
+        'shadow-inner appearance-none bg-gray-200 rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-gray-300';
+    const textareaStyles =
+        'shadow-inner appearance-none bg-gray-200 rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-gray-300';
     const labelStyles = 'block text-gray-700 text-sm font-bold mb-2 text-left';
     const inputHoverStyles =
         'hover:bg-gradient-to-r from-indigo-100 to-purple-100';
@@ -78,7 +80,7 @@ export default function Contact() {
             <div>
                 <form
                     onSubmit={handleSubmit}
-                    className="max-w-lg mx-auto p-4 bg-white"
+                    className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto p-4 bg-white"
                 >
                     <div className="mb-4 text-left">
                         <label className={labelStyles}>Name:</label>
@@ -109,7 +111,7 @@ export default function Contact() {
                             value={formData.message}
                             onChange={handleChange}
                             required
-                            className={`${inputStyles} ${inputHoverStyles}`}
+                            className={`${textareaStyles} ${inputHoverStyles}`}
                         />
                     </div>
                     <div className="flex justify-center">
