@@ -1,5 +1,4 @@
 import React from 'react';
-
 import HtmlIcon from '../assets/icons/html.svg';
 import JavaIcon from '../assets/icons/java.svg';
 import JavascriptIcon from '../assets/icons/javascript.svg';
