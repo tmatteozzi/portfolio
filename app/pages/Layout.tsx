@@ -45,11 +45,10 @@ export default function Layout() {
                     </div>
                     <p className="text-l md:text-xl lg:text-xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-4 px-4">
                         {' '}
-                        {/* Agregado de relleno horizontal */}A passionate
-                        software developer committed to creating efficient and
-                        innovative solutions. Constantly learning and evolving,
-                        I bring a diverse set of skills to each project,
-                        enabling me to deliver high-quality, scalable
+                        A passionate software developer committed to creating
+                        efficient and innovative solutions. Constantly learning
+                        and evolving, I bring a diverse set of skills to each
+                        project, enabling me to deliver high-quality, scalable
                         applications.
                     </p>
                     <motion.div
