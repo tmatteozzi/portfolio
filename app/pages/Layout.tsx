@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { HeroHighlight, Highlight } from '../components/ui/hero-highlight';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const motionConfig = {
     initial: {
@@ -51,17 +52,35 @@ export default function Layout() {
                     </p>
                     <motion.div
                         {...motionConfig}
-                        className="flex justify-center"
+                        className="flex flex-col items-center"
                     >
                         <motion.button
                             {...buttonMotionConfig}
-                            className="p-[3px] relative"
+                            className="p-[3px] relative mb-4"
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 rounded-lg" />
                             <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-black dark:hover:text-black">
                                 Download Resume
                             </div>
                         </motion.button>
+                        <div className="flex space-x-4 mt-2">
+                            <a
+                                href="https://github.com/tmatteozzi"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-700 dark:text-white hover:text-indigo-300"
+                            >
+                                <FaGithub size={30} />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/tomás-matteozzi-452b3728b"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-700 dark:text-white hover:text-indigo-300"
+                            >
+                                <FaLinkedin size={30} />
+                            </a>
+                        </div>
                     </motion.div>
                 </motion.div>
             </HeroHighlight>
