@@ -21,8 +21,8 @@ export default function Navbar() {
             link: '#tech-stack'
         },
         {
-            name: 'Experience',
-            link: '#experience'
+            name: 'Contact',
+            link: '#contact'
         }
     ];
 
