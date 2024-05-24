@@ -32,7 +32,7 @@ export default function Layout() {
     return (
         <section
             id="layout"
-            className="flex flex-col items-center justify-center"
+            className="flex flex-col items-center justify-center h-[calc(100vh-60px)] mt-[60px]"
         >
             <HeroHighlight className="flex flex-col justify-center items-center">
                 <motion.div {...motionConfig} className="text-center">
@@ -43,11 +43,13 @@ export default function Layout() {
                         </Highlight>
                         !
                     </div>
-                    <p className="text-l md:text-xl lg:text-xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-4">
-                        A passionate software developer committed to creating
-                        efficient and innovative solutions. Constantly learning
-                        and evolving, I bring a diverse set of skills to each
-                        project, enabling me to deliver high-quality, scalable
+                    <p className="text-l md:text-xl lg:text-xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-4 px-4">
+                        {' '}
+                        {/* Agregado de relleno horizontal */}A passionate
+                        software developer committed to creating efficient and
+                        innovative solutions. Constantly learning and evolving,
+                        I bring a diverse set of skills to each project,
+                        enabling me to deliver high-quality, scalable
                         applications.
                     </p>
                     <motion.div
