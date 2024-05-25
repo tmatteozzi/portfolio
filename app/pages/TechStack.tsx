@@ -7,7 +7,6 @@ import PythonIcon from '../assets/icons/python.svg';
 import CssIcon from '../assets/icons/css.svg';
 import ReactIcon from '../assets/icons/react.svg';
 import MySQLIcon from '../assets/icons/mysql.svg';
-import BashIcon from '../assets/icons/bash.svg';
 import TailwindIcon from '../assets/icons/tailwind.svg';
 import NextJSIcon from '../assets/icons/nextjs.svg';
 import ViteIcon from '../assets/icons/vite.svg';
@@ -58,10 +57,6 @@ export default function TechStack() {
         {
             name: 'Linux',
             img: LinuxIcon
-        },
-        {
-            name: 'Bash',
-            img: BashIcon
         },
         {
             name: 'Tailwind',
