@@ -1,6 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { FiMenu, FiX } from 'react-icons/fi';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -57,20 +59,17 @@ export default function Navbar() {
                         className="md:hidden block focus:outline-none"
                         onClick={() => setIsOpen(!isOpen)}
                     >
-                        <svg
-                            className="w-6 h-6"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
+                        <motion.div
+                            initial={{ rotate: 0 }}
+                            animate={{ rotate: isOpen ? 90 : 0 }}
+                            transition={{ duration: 0.3 }}
                         >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M4 6h16M4 12h16m-7 6h7"
-                            ></path>
-                        </svg>
+                            {isOpen ? (
+                                <FiX className="w-6 h-6" />
+                            ) : (
+                                <FiMenu className="w-6 h-6" />
+                            )}
+                        </motion.div>
                     </button>
                     <div className="hidden md:flex items-center space-x-4">
                         {navItems.map((item) => (
@@ -91,19 +90,27 @@ export default function Navbar() {
                     </div>
                 </button>
             </div>
-            {isOpen && (
-                <div className="md:hidden flex flex-col items-center mt-4 space-y-4">
-                    {navItems.map((item) => (
-                        <Link
-                            className="py-2 px-4 font-semibold text-black hover:text-indigo-300"
-                            key={item.name}
-                            href={item.link}
-                        >
-                            {item.name}
-                        </Link>
-                    ))}
-                </div>
-            )}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="md:hidden flex flex-col items-center mt-4 space-y-4"
+                    >
+                        {navItems.map((item) => (
+                            <Link
+                                className="py-2 px-4 font-semibold text-black hover:text-indigo-300"
+                                key={item.name}
+                                href={item.link}
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </nav>
     );
 }
