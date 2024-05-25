@@ -77,14 +77,14 @@ export default function TechStack() {
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white leading-relaxed lg:leading-snug mb-16 mx-auto">
                 Tech Stack
             </h1>
-            <div className="flex justify-center flex-wrap gap-8 max-w-6xl mx-auto">
+            <div className="flex flex-col sm:flex-row items-center justify-center flex-wrap gap-8 max-w-6xl mx-auto">
                 {techStackItems.map((item, index) => (
                     <div
                         key={index}
-                        className="w-56 h-50 rounded-3xl p-4 shadow-xl border flex justify-center items-center transform transition-transform duration-300 hover:scale-105"
+                        className="w-44 h-40 rounded-3xl p-4 shadow-xl border flex justify-center items-center transform transition-transform duration-300 hover:scale-105"
                     >
                         <div className="flex flex-col items-center p-4">
-                            <item.img width={100} height={100} />
+                            <item.img width={80} height={80} />
                             <p className="mt-4 text-sm font-semibold">
                                 {item.name}
                             </p>
