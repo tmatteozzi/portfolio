@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -12,19 +12,19 @@ export default function Navbar() {
     const navItems = [
         {
             name: 'About',
-            link: '#about'
+            link: 'about'
         },
         {
             name: 'Portfolio',
-            link: '#portfolio'
+            link: 'portfolio'
         },
         {
             name: 'Technologies',
-            link: '#tech-stack'
+            link: 'tech-stack'
         },
         {
             name: 'Contact',
-            link: '#contact'
+            link: 'contact'
         }
     ];
 
@@ -73,13 +73,16 @@ export default function Navbar() {
                     </button>
                     <div className="hidden md:flex items-center space-x-4">
                         {navItems.map((item) => (
-                            <Link
-                                className="py-4 px-2 font-semibold text-black hover:text-indigo-300"
+                            <ScrollLink
+                                className="py-4 px-2 font-semibold text-black hover:text-indigo-300 cursor-pointer"
                                 key={item.name}
-                                href={item.link}
+                                to={item.link}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
                             >
                                 {item.name}
-                            </Link>
+                            </ScrollLink>
                         ))}
                     </div>
                 </div>
@@ -110,12 +113,15 @@ export default function Navbar() {
                                 }}
                                 className="mb-4"
                             >
-                                <Link
-                                    className="py-2 px-4 font-semibold text-black hover:text-indigo-300"
-                                    href={item.link}
+                                <ScrollLink
+                                    className="py-2 px-4 font-semibold text-black hover:text-indigo-300 cursor-pointer"
+                                    to={item.link}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
                                 >
                                     {item.name}
-                                </Link>
+                                </ScrollLink>
                             </motion.div>
                         ))}
                     </motion.div>
