@@ -96,17 +96,27 @@ export default function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="md:hidden flex flex-col items-center mt-4 space-y-4"
+                        transition={{ duration: 0.3, delayChildren: 0.1 }}
+                        className="md:hidden flex flex-col items-center mt-4"
                     >
-                        {navItems.map((item) => (
-                            <Link
-                                className="py-2 px-4 font-semibold text-black hover:text-indigo-300"
+                        {navItems.map((item, index) => (
+                            <motion.div
                                 key={item.name}
-                                href={item.link}
+                                initial={{ opacity: 0, y: -20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    duration: 0.2,
+                                    delay: index * 0.1
+                                }}
+                                className="mb-4"
                             >
-                                {item.name}
-                            </Link>
+                                <Link
+                                    className="py-2 px-4 font-semibold text-black hover:text-indigo-300"
+                                    href={item.link}
+                                >
+                                    {item.name}
+                                </Link>
+                            </motion.div>
                         ))}
                     </motion.div>
                 )}

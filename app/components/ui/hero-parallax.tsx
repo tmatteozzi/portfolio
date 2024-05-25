@@ -14,6 +14,7 @@ export const HeroParallax = ({
     products
 }: {
     products: {
+        id: number;
         title: string;
         link: string;
         thumbnail: string;
@@ -74,7 +75,7 @@ export const HeroParallax = ({
                         <ProductCard
                             product={product}
                             translate={translateX}
-                            key={product.title}
+                            key={product.id}
                         />
                     ))}
                 </motion.div>
@@ -83,7 +84,7 @@ export const HeroParallax = ({
                         <ProductCard
                             product={product}
                             translate={translateXReverse}
-                            key={product.title}
+                            key={product.id}
                         />
                     ))}
                 </motion.div>
@@ -92,7 +93,7 @@ export const HeroParallax = ({
                         <ProductCard
                             product={product}
                             translate={translateX}
-                            key={product.title}
+                            key={product.id}
                         />
                     ))}
                 </motion.div>
