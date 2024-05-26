@@ -9,9 +9,10 @@ export default function About() {
             name: 'Why I code',
             content: (
                 <p>
-                    Started coding in 2020 and I&apos;m hooked! Building things
-                    with code is amazing. React is my jam for creating awesome
-                    user interfaces.
+                    Started coding in 2020 and{' '}
+                    <Highlight>I&apos;m hooked!</Highlight> Building things with
+                    code is amazing. React is my jam for creating awesome user
+                    interfaces.
                 </p>
             )
         },
@@ -28,17 +29,6 @@ export default function About() {
         },
         {
             id: 2,
-            name: 'My coding goals',
-            content: (
-                <p>
-                    Becoming a coding rockstar is the dream! I want to build all
-                    sorts of cool stuff, from web apps to mobile apps. Maybe
-                    even help others learn to code someday.
-                </p>
-            )
-        },
-        {
-            id: 3,
             name: 'What makes me tick',
             content: (
                 <p>
@@ -48,6 +38,17 @@ export default function About() {
                     </Highlight>{' '}
                     to my code. I love a good challenge and aim to create
                     top-notch solutions every time.
+                </p>
+            )
+        },
+        {
+            id: 3,
+            name: 'My coding goals',
+            content: (
+                <p>
+                    Becoming a coding rockstar is the dream! I want to build all
+                    sorts of cool stuff, from web apps to mobile apps. Maybe
+                    even help others learn to code someday.
                 </p>
             )
         }
