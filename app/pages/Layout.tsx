@@ -32,9 +32,11 @@ export default function Layout() {
     return (
         <section
             id="layout"
-            className="flex flex-col items-center justify-center h-[calc(100vh-60px)] mt-[60px]"
+            className="flex flex-col items-center justify-center h-[calc(100vh-60px)] mt-[60px] dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative"
         >
-            <div className="flex flex-col justify-center items-center">
+            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+
+            <div className="flex flex-col justify-center items-center relative z-10">
                 <motion.div {...motionConfig} className="text-center">
                     <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-4">
                         Hi! I am <br className="md:hidden" />
@@ -44,7 +46,6 @@ export default function Layout() {
                         !
                     </div>
                     <p className="text-l md:text-xl lg:text-xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-4 px-4">
-                        {' '}
                         A passionate software developer committed to creating
                         efficient and innovative solutions. Constantly learning
                         and evolving, I bring a diverse set of skills to each
