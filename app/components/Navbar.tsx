@@ -89,7 +89,7 @@ export default function Navbar() {
                 </div>
                 <button onClick={downloadPdf} className="p-[3px] relative mr-4">
                     <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 rounded-lg" />
-                    <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-black dark:hover:text-black">
+                    <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-black dark:hover:text-black text-xs md:text-base">
                         Resume
                     </div>
                 </button>
