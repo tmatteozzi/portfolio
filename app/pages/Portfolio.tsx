@@ -1,6 +1,4 @@
 import { HeroParallax } from '../components/ui/hero-parallax';
-import ml from '../assets/projects/ml.png';
-import gca from '../assets/projects/gca.png';
 
 export default function Portfolio() {
     const products = [
@@ -8,55 +6,55 @@ export default function Portfolio() {
             id: 1,
             title: 'Matteozzi Lavilla',
             link: 'https://google.com',
-            thumbnail: ml.src
+            thumbnail: '/assets/projects/ml.png'
         },
         {
             id: 2,
             title: 'Mazzo GCA',
             link: 'https://google.com',
-            thumbnail: gca.src
+            thumbnail: '/assets/projects/gca.png'
         },
         {
             id: 3,
             title: 'Matteozzi Lavilla',
             link: 'https://google.com',
-            thumbnail: ml.src
+            thumbnail: '/assets/projects/ml.png'
         },
         {
             id: 4,
             title: 'Mazzo GCA',
             link: 'https://google.com',
-            thumbnail: gca.src
+            thumbnail: '/assets/projects/gca.png'
         },
         {
             id: 5,
             title: 'Matteozzi Lavilla',
             link: 'https://google.com',
-            thumbnail: ml.src
+            thumbnail: '/assets/projects/ml.png'
         },
         {
             id: 6,
             title: 'Mazzo GCA',
             link: 'https://google.com',
-            thumbnail: gca.src
+            thumbnail: '/assets/projects/gca.png'
         },
         {
             id: 7,
             title: 'Mazzo GCA',
             link: 'https://google.com',
-            thumbnail: gca.src
+            thumbnail: '/assets/projects/gca.png'
         },
         {
             id: 8,
             title: 'Matteozzi Lavilla',
             link: 'https://google.com',
-            thumbnail: ml.src
+            thumbnail: '/assets/projects/ml.png'
         },
         {
             id: 9,
             title: 'Mazzo GCA',
             link: 'https://google.com',
-            thumbnail: gca.src
+            thumbnail: '/assets/projects/gca.png'
         }
     ];
     // USAR HERO PARALLAX

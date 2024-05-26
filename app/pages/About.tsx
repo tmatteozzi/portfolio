@@ -1,5 +1,4 @@
 import { CardStack, Highlight } from '../components/ui/card-stack';
-import me from '../assets/me.jpg';
 import Image from 'next/image';
 
 export default function About() {
@@ -68,7 +67,7 @@ export default function About() {
                 </div>
                 <div className="relative">
                     <Image
-                        src={me}
+                        src="/assets/me.jpg"
                         alt="Tomás Matteozzi"
                         height={250}
                         width={250}
