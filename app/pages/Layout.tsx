@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { Highlight } from '../components/ui/highlight';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import downloadPdf from '../utils/downloadPdf';
 
 const motionConfig = {
     initial: {
@@ -57,6 +58,7 @@ export default function Layout() {
                         className="flex flex-col items-center"
                     >
                         <motion.button
+                            onClick={downloadPdf}
                             {...buttonMotionConfig}
                             className="p-[3px] relative mb-4"
                         >
