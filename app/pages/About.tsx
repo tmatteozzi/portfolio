@@ -8,21 +8,25 @@ export default function About() {
             name: 'Why I code',
             content: (
                 <p>
-                    Started coding in 2020 and{' '}
-                    <Highlight>I&apos;m hooked!</Highlight> Building things with
-                    code is amazing. React is my jam for creating awesome user
-                    interfaces.
+                    I started learning to code in 2020, and since then,{' '}
+                    <Highlight>I&apos;ve been hooked!</Highlight> The process of
+                    building things with code is amazing. I love the way I can
+                    find different ways to solve problems, and the constant
+                    opportunity to learn and improve.
                 </p>
             )
         },
+
         {
             id: 1,
             name: 'Always learning',
             content: (
                 <p>
                     The world of code keeps evolving. I love taking online
-                    courses, attending workshops, and staying updated with the
-                    latest tech.
+                    courses, attending workshops, and{' '}
+                    <Highlight>
+                        staying updated with the latest tech.{' '}
+                    </Highlight>
                 </p>
             )
         },
@@ -45,9 +49,15 @@ export default function About() {
             name: 'My coding goals',
             content: (
                 <p>
-                    Becoming a coding rockstar is the dream! I want to build all
-                    sorts of cool stuff, from web apps to mobile apps. Maybe
-                    even help others learn to code someday.
+                    I want to build a variety of applications, from web to
+                    mobile.{' '}
+                    <Highlight>
+                        Ultimately, I aspire to establish my own development
+                        company.{' '}
+                    </Highlight>{' '}
+                    Before taking that leap, I plan to explore various roles in
+                    different workplaces to enrich my skills and gather diverse
+                    experiences.
                 </p>
             )
         }
