@@ -63,7 +63,7 @@ export default function Layout() {
                             className="p-[3px] relative mb-4"
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500 rounded-lg" />
-                            <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-black dark:hover:text-black">
+                            <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-gray-950 dark:hover:text-black">
                                 Download Resume
                             </div>
                         </motion.button>
