@@ -10,9 +10,7 @@ export default function About() {
                 <p>
                     I started learning to code in 2020, and since then,{' '}
                     <Highlight>I&apos;ve been hooked!</Highlight> The process of
-                    building things with code is amazing. I love the way I can
-                    find different ways to solve problems, and the constant
-                    opportunity to learn and improve.
+                    building things with code is amazing.
                 </p>
             )
         },
@@ -46,18 +44,14 @@ export default function About() {
         },
         {
             id: 3,
-            name: 'My coding goals',
+            name: 'My goals',
             content: (
                 <p>
-                    I want to build a variety of applications, from web to
-                    mobile.{' '}
+                    Before leaping into entrepreneurship, I aim to explore
+                    diverse roles across various workplaces to{' '}
                     <Highlight>
-                        Ultimately, I aspire to establish my own development
-                        company.{' '}
-                    </Highlight>{' '}
-                    Before taking that leap, I plan to explore various roles in
-                    different workplaces to enrich my skills and gather diverse
-                    experiences.
+                        enhance my skills and gather rich experiences.{' '}
+                    </Highlight>
                 </p>
             )
         }
