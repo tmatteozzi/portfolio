@@ -33,9 +33,9 @@ export default function Layout() {
     return (
         <section
             id="layout"
-            className="flex flex-col items-center justify-center h-[calc(100vh-60px)] mt-[60px] dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative"
+            className="flex flex-col items-center justify-center h-[calc(100vh-60px)] mt-[60px] dark:bg-gray-950 bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative"
         >
-            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-gray-950 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:[mask-image:radial-gradient(ellipse_at_center,transparent_5%,black)]"></div>
 
             <div className="flex flex-col justify-center items-center relative z-10">
                 <motion.div {...motionConfig} className="text-center">
@@ -72,7 +72,7 @@ export default function Layout() {
                                 href="https://github.com/tmatteozzi"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-700 dark:text-white hover:text-indigo-300"
+                                className="text-gray-700 dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500"
                             >
                                 <FaGithub size={30} />
                             </a>
@@ -80,7 +80,7 @@ export default function Layout() {
                                 href="https://www.linkedin.com/in/tomás-matteozzi-452b3728b"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-700 dark:text-white hover:text-indigo-300"
+                                className="text-gray-700 dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500"
                             >
                                 <FaLinkedin size={30} />
                             </a>

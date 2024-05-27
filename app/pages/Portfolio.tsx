@@ -59,7 +59,7 @@ export default function Portfolio() {
     ];
 
     return (
-        <section id="portfolio" className="bg-white dark:bg-black">
+        <section id="portfolio" className="bg-white dark:bg-gray-950">
             <HeroParallax products={products} />
         </section>
     );
