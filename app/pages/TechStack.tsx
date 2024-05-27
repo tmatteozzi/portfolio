@@ -76,7 +76,7 @@ export default function TechStack() {
                 {techStackItems.map((item, index) => (
                     <div
                         key={index}
-                        className="w-44 h-40 rounded-3xl p-4 shadow-xl border dark:border-gray-700 flex justify-center items-center transform transition-transform duration-300 hover:scale-105 dark:bg-gray-900"
+                        className="w-44 h-40 rounded-3xl p-4 shadow-xl border dark:border-gray-800 flex justify-center items-center transform transition-transform duration-300 hover:scale-105 dark:bg-gray-900"
                     >
                         <div className="flex flex-col items-center p-4">
                             <item.img width={80} height={80} />
