@@ -39,14 +39,14 @@ export default function Layout() {
 
             <div className="flex flex-col justify-center items-center relative z-10">
                 <motion.div {...motionConfig} className="text-center">
-                    <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-4">
+                    <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-gray-100 max-w-4xl leading-relaxed lg:leading-snug mb-4">
                         Hi! I am <br className="md:hidden" />
                         <Highlight className="text-black dark:text-white inline">
                             Tomás Agustín Matteozzi
                         </Highlight>
                         !
                     </div>
-                    <p className="text-l md:text-xl lg:text-xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-4 px-4">
+                    <p className="text-l md:text-xl lg:text-xl font-bold text-neutral-700 dark:text-gray-100 max-w-4xl leading-relaxed lg:leading-snug mb-4 px-4">
                         A passionate software developer committed to creating
                         efficient and innovative solutions. Constantly learning
                         and evolving, I bring a diverse set of skills to each
