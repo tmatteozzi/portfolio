@@ -48,7 +48,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`bg-gray-50 shadow-sm px-2 py-1.5 border-b border-gray-200 fixed top-0 w-full z-50 transition-transform duration-300 ${
+            className={`bg-gray-50 dark:bg-gray-950 shadow-sm px-2 py-1.5 border-b border-gray-200 dark:border-gray-800 fixed top-0 w-full z-50 transition-transform duration-300 ${
                 showNavbar
                     ? 'transform translate-y-0'
                     : 'transform -translate-y-full'
@@ -66,16 +66,16 @@ export default function Navbar() {
                             transition={{ duration: 0.3 }}
                         >
                             {isOpen ? (
-                                <FiX className="w-6 h-6" />
+                                <FiX className="w-6 h-6 text-black dark:text-white" />
                             ) : (
-                                <FiMenu className="w-6 h-6" />
+                                <FiMenu className="w-6 h-6 text-black dark:text-white" />
                             )}
                         </motion.div>
                     </button>
                     <div className="hidden md:flex items-center space-x-4">
                         {navItems.map((item) => (
                             <ScrollLink
-                                className="py-4 px-2 font-semibold text-black hover:text-indigo-300 cursor-pointer"
+                                className="py-4 px-2 font-semibold text-black dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500 cursor-pointer"
                                 key={item.name}
                                 to={item.link}
                                 smooth={true}
@@ -88,7 +88,7 @@ export default function Navbar() {
                     </div>
                 </div>
                 <button onClick={downloadPdf} className="p-[3px] relative mr-4">
-                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 rounded-lg" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500 rounded-lg" />
                     <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-black dark:hover:text-black text-xs md:text-base">
                         Resume
                     </div>
@@ -115,7 +115,7 @@ export default function Navbar() {
                                 className="mb-4"
                             >
                                 <ScrollLink
-                                    className="py-2 px-4 font-semibold text-black hover:text-indigo-300 cursor-pointer"
+                                    className="py-2 px-4 font-semibold text-black dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500 cursor-pointer"
                                     to={item.link}
                                     smooth={true}
                                     offset={-70}

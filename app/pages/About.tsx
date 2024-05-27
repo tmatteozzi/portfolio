@@ -56,7 +56,7 @@ export default function About() {
     return (
         <section
             id="about"
-            className="flex flex-col items-center pt-8 pb-16 py-4 bg-gray-50"
+            className="flex flex-col items-center pt-8 pb-16 py-4 bg-gray-50 dark:bg-gray-950"
         >
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-16 text-center lg:text-left">
                 About me
@@ -71,7 +71,7 @@ export default function About() {
                         alt="Tomás Matteozzi"
                         height={250}
                         width={250}
-                        className="border-4 border-indigo-300 rounded-full transition-transform duration-800 hover:scale-105 hover:border-4 hover:border-purple-300 shadow-xl hover:shadow-black/[0.15] shadow-black/[0.1]"
+                        className="border-4 rounded-full transition-transform duration-800 hover:scale-105 hover:border-4 border-indigo-300 dark:border-indigo-500 dark:hover:border-purple-500 hover:border-purple-300 shadow-xl hover:shadow-black/[0.15] shadow-black/[0.1]"
                     />
                 </div>
             </div>

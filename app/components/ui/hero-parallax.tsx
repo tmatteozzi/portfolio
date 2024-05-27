@@ -150,7 +150,7 @@ export const ProductCard = ({
                     alt={product.title}
                 />
             </Link>
-            <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-gradient-to-r from-indigo-50 to-purple-50 pointer-events-none"></div>
+            <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-gradient-to-r from-indigo-50 to-purple-50 dark:bg-gradient-to-r dark:from-indigo-400 dark:to-purple-400 pointer-events-none"></div>
             <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-black font-semibold">
                 {product.title}
             </h2>
