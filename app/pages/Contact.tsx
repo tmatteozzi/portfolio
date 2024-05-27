@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com';
 
 interface ContactState {
     name: string;

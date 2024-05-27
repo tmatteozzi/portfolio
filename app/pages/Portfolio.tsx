@@ -57,7 +57,7 @@ export default function Portfolio() {
             thumbnail: '/assets/projects/gca.png'
         }
     ];
-    // USAR HERO PARALLAX
+
     return (
         <section id="portfolio" className="bg-white dark:bg-black">
             <HeroParallax products={products} />

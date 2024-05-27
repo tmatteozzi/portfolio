@@ -1,8 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Highlight } from '../components/ui/highlight';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import downloadPdf from '../utils/downloadPdf';
+import { Highlight } from '../components/ui/highlight';
 
 const motionConfig = {
     initial: {

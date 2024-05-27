@@ -1,5 +1,5 @@
-import { CardStack, Highlight } from '../components/ui/card-stack';
 import Image from 'next/image';
+import { CardStack, Highlight } from '../components/ui/card-stack';
 
 export default function About() {
     const items = [
