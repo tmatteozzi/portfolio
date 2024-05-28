@@ -33,6 +33,7 @@ export default function Navbar() {
         const handleScroll = () => {
             if (window.scrollY > lastScrollY && window.scrollY > 100) {
                 setShowNavbar(false);
+                setIsOpen(false);
             } else {
                 setShowNavbar(true);
             }
