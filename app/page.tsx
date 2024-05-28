@@ -1,5 +1,5 @@
 import Divider from './components/Divider';
-import Navbar from './components/Navbar';
+import Navbar from './pages/Navbar';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Layout from './pages/Layout';
