@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import downloadPdf from '../utils/downloadPdf';
 import { Highlight } from '../components/ui/highlight';
+import { ReactNode } from 'react';
 
 const motionConfig = {
     initial: {
@@ -29,7 +30,17 @@ const buttonMotionConfig = {
     }
 };
 
-export default function Layout() {
+interface LayoutProps {
+    content: {
+        name: string;
+        description: string;
+        buttonText: string;
+        socialLinks: { url: string; icon: ReactNode }[];
+    };
+}
+
+export default function Layout({ content }: LayoutProps) {
+    const { name, description, buttonText, socialLinks } = content;
     return (
         <section
             id="layout"
@@ -42,16 +53,12 @@ export default function Layout() {
                     <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-gray-100 max-w-4xl leading-relaxed lg:leading-snug mb-4">
                         Hi! I am <br className="md:hidden" />
                         <Highlight className="text-black dark:text-white inline">
-                            Tomás Agustín Matteozzi
+                            {name}
                         </Highlight>
                         !
                     </div>
                     <p className="text-l md:text-xl lg:text-xl font-bold text-neutral-700 dark:text-gray-100 max-w-4xl leading-relaxed lg:leading-snug mb-4 px-4">
-                        A passionate software developer committed to creating
-                        efficient and innovative solutions. Constantly learning
-                        and evolving, I bring a diverse set of skills to each
-                        project, enabling me to deliver high-quality, scalable
-                        applications.
+                        {description}
                     </p>
                     <motion.div
                         {...motionConfig}
@@ -64,26 +71,21 @@ export default function Layout() {
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500 rounded-lg" />
                             <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-gray-950 dark:hover:text-black">
-                                Download Resume
+                                {buttonText}
                             </div>
                         </motion.button>
                         <div className="flex space-x-4 mt-2">
-                            <a
-                                href="https://github.com/tmatteozzi"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-700 dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500"
-                            >
-                                <FaGithub size={30} />
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/tomás-matteozzi-452b3728b"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-700 dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500"
-                            >
-                                <FaLinkedin size={30} />
-                            </a>
+                            {socialLinks.map((link, index) => (
+                                <a
+                                    key={index}
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-700 dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500"
+                                >
+                                    {link.icon}
+                                </a>
+                            ))}
                         </div>
                     </motion.div>
                 </motion.div>
