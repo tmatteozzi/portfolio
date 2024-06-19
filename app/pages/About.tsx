@@ -1,63 +1,19 @@
 import Image from 'next/image';
-import { CardStack, Highlight } from '../components/ui/card-stack';
-import me from '../assets/me.jpg';
+import { CardStack } from '../components/ui/card-stack';
 
-export default function About() {
-    const items = [
-        {
-            id: 0,
-            name: 'Why I code',
-            content: (
-                <p>
-                    I started learning to code in 2020, and since then,{' '}
-                    <Highlight>I&apos;ve been hooked!</Highlight> The process of
-                    building things with code is amazing.
-                </p>
-            )
-        },
+interface AboutProps {
+    content: {
+        image: string;
+        items: {
+            id: number;
+            name: string;
+            content: React.ReactNode;
+        }[];
+    };
+}
 
-        {
-            id: 1,
-            name: 'Always learning',
-            content: (
-                <p>
-                    The world of code keeps evolving. I love taking online
-                    courses, attending workshops, and{' '}
-                    <Highlight>
-                        staying updated with the latest tech.{' '}
-                    </Highlight>
-                </p>
-            )
-        },
-        {
-            id: 2,
-            name: 'What makes me tick',
-            content: (
-                <p>
-                    I bring{' '}
-                    <Highlight>
-                        passion, dedication, and a problem-solving superpower
-                    </Highlight>{' '}
-                    to my code. I love a good challenge and aim to create
-                    top-notch solutions every time.
-                </p>
-            )
-        },
-        {
-            id: 3,
-            name: 'My goals',
-            content: (
-                <p>
-                    Before leaping into entrepreneurship, I aim to explore
-                    diverse roles across various workplaces to{' '}
-                    <Highlight>
-                        enhance my skills and gather rich experiences.{' '}
-                    </Highlight>
-                </p>
-            )
-        }
-    ];
-
+export default function About({ content }: AboutProps) {
+    const { image, items } = content;
     return (
         <section
             id="about"
@@ -72,7 +28,7 @@ export default function About() {
                 </div>
                 <div className="relative">
                     <Image
-                        src={me}
+                        src={image}
                         alt="Tomás Matteozzi"
                         height={250}
                         width={250}
