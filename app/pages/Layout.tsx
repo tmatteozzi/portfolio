@@ -1,6 +1,5 @@
 'use client';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import downloadPdf from '../utils/downloadPdf';
 import { Highlight } from '../components/ui/highlight';
 import { ReactNode } from 'react';
@@ -81,7 +80,7 @@ export default function Layout({ content }: LayoutProps) {
                                     href={link.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-gray-700 dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500"
+                                    className="text-gray-700 dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500 transition-colors duration-300"
                                 >
                                     {link.icon}
                                 </a>

@@ -1,32 +1,37 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { ReactNode } from 'react';
 
-export default function Footer() {
+interface FooterProps {
+    content: {
+        name: string;
+        role: string;
+        socialLinks: { url: string; icon: ReactNode }[];
+    };
+}
+
+export default function Footer({ content }: FooterProps) {
+    const { name, role, socialLinks } = content;
+
     return (
         <footer className="bg-gray-50 dark:bg-gray-950 text-center py-8">
             <div className="container mx-auto">
                 <h2 className="text-md md:text-l lg:text-xl font-bold text-neutral-700 dark:text-white">
-                    © Tomás Agustín Matteozzi
+                    © {name}
                 </h2>
                 <p className="text-sm md:text-md lg:text-l font-semibold text-neutral-600 dark:text-neutral-400">
-                    Software Engineer
+                    {role}
                 </p>
                 <div className="flex justify-center space-x-6 mt-2">
-                    <a
-                        href="https://github.com/tmatteozzi"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-700 dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500 transition-colors duration-300"
-                    >
-                        <FaGithub size={25} />
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/tomás-matteozzi-452b3728b"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-700 dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500 transition-colors duration-300"
-                    >
-                        <FaLinkedin size={25} />
-                    </a>
+                    {socialLinks.map((link, index) => (
+                        <a
+                            key={index}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-700 dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500 transition-colors duration-300"
+                        >
+                            {link.icon}
+                        </a>
+                    ))}
                 </div>
             </div>
         </footer>
