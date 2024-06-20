@@ -28,7 +28,7 @@ export default function ExperienceList({ experiences }: ExperienceListProps) {
                 Experience
             </h1>
             <motion.div
-                className="flex flex-wrap justify-center items-center gap-8 max-w-7xl mx-auto"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -37,7 +37,7 @@ export default function ExperienceList({ experiences }: ExperienceListProps) {
                     <motion.div
                         key={index}
                         variants={itemVariants}
-                        className="w-full sm:w-3/4 lg:w-1/3"
+                        className="flex items-stretch"
                     >
                         <Experience
                             companyName={experience.companyName}

@@ -21,7 +21,7 @@ export default function Experience({
 }: ExperienceProps) {
     return (
         <motion.div
-            className="p-6 shadow-lg border border-gray-300 dark:border-gray-800 rounded-xl bg-white dark:bg-gray-900 transform transition-transform duration-500"
+            className="p-6 shadow-lg border border-gray-300 dark:border-gray-800 rounded-xl bg-white dark:bg-gray-900 transform transition-transform duration-500 w-full"
             whileHover="hover"
             variants={experienceVariants}
         >
