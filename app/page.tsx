@@ -122,20 +122,6 @@ const experiences = [
         description:
             'Provided technical assistance to event participants. Resolved computer and software related issues.',
         duration: '2020'
-    },
-    {
-        companyName: 'Instituto Lenguas Vivas Bariloche',
-        role: 'Secretary & Appointment Setter',
-        description:
-            ' Performed administrative and customer service tasks. Provided support to teachers and students.',
-        duration: '2021'
-    },
-    {
-        companyName: 'Argentina Mining & Innqube',
-        role: 'Event / Tech Support',
-        description:
-            'Provided technical assistance to event participants. Resolved computer and software related issues.',
-        duration: '2020'
     }
 ];
 
