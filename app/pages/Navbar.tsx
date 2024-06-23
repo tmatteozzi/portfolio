@@ -76,7 +76,7 @@ export default function Navbar() {
                     <div className="hidden md:flex items-center space-x-4">
                         {navItems.map((item) => (
                             <ScrollLink
-                                className="py-4 px-2 font-semibold text-black dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500 cursor-pointer"
+                                className="text-sm py-4 px-2 font-semibold text-black dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500 cursor-pointer"
                                 key={item.name}
                                 to={item.link}
                                 smooth={true}
@@ -90,7 +90,7 @@ export default function Navbar() {
                 </div>
                 <button onClick={downloadPdf} className="p-[3px] relative mr-4">
                     <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500 rounded-lg" />
-                    <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-gray-950 dark:hover:text-black text-xs md:text-base">
+                    <div className="px-8 py-1.5 lg:py-1 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-gray-950 dark:hover:text-black text-xs md:text-base">
                         Resume
                     </div>
                 </button>
@@ -116,7 +116,7 @@ export default function Navbar() {
                                 className="mb-4"
                             >
                                 <ScrollLink
-                                    className="py-2 px-4 font-semibold text-black dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500 cursor-pointer"
+                                    className="text-sm py-2 px-4 font-semibold text-black dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500 cursor-pointer"
                                     to={item.link}
                                     smooth={true}
                                     offset={-70}
