@@ -49,7 +49,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`bg-gray-50 dark:bg-gray-950 shadow-sm px-2 py-1.5 border-b border-gray-200 dark:border-gray-800 fixed top-0 w-full z-50 transition-transform duration-300 ${
+            className={`bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-950 dark:to-black shadow-sm px-2 py-1.5 border-b border-gray-200 dark:border-gray-800 fixed top-0 w-full z-50 transition-transform duration-300 ${
                 showNavbar
                     ? 'transform translate-y-0'
                     : 'transform -translate-y-full'
