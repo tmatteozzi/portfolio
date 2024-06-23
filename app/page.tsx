@@ -122,6 +122,20 @@ const experiences = [
         description:
             'Provided technical assistance to event participants. Resolved computer and software related issues.',
         duration: '2020'
+    },
+    {
+        companyName: 'Instituto Lenguas Vivas Bariloche',
+        role: 'Secretary & Appointment Setter',
+        description:
+            ' Performed administrative and customer service tasks. Provided support to teachers and students.',
+        duration: '2021'
+    },
+    {
+        companyName: 'Argentina Mining & Innqube',
+        role: 'Event / Tech Support',
+        description:
+            'Provided technical assistance to event participants. Resolved computer and software related issues.',
+        duration: '2020'
     }
 ];
 
@@ -180,6 +194,18 @@ const techStack = [
     }
 ];
 
+const footerContent = {
+    name: 'Tomás Agustín Matteozzi',
+    role: 'Software Engineer',
+    socialLinks: [
+        { url: 'https://github.com/tmatteozzi', icon: <FaGithub size={25} /> },
+        {
+            url: 'https://www.linkedin.com/in/tomás-matteozzi-452b3728b',
+            icon: <FaLinkedin size={25} />
+        }
+    ]
+};
+
 export default function Home() {
     return (
         <div>
@@ -196,7 +222,7 @@ export default function Home() {
             <Divider />
             <Contact />
             <Divider />
-            <Footer />
+            <Footer content={footerContent} />
         </div>
     );
 }

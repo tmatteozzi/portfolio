@@ -11,7 +11,7 @@ export default function TechStack({ techStack }: TechStackProps) {
     return (
         <section
             id="tech-stack"
-            className="pt-8 pb-16 py-4 bg-gray-50 dark:bg-gray-950 text-center"
+            className="pt-8 pb-16 py-4 bg-white dark:bg-gray-950 text-center"
         >
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white leading-relaxed lg:leading-snug mb-16 mx-auto">
                 Tech Stack

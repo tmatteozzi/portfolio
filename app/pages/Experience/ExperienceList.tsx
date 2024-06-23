@@ -22,7 +22,7 @@ export default function ExperienceList({ experiences }: ExperienceListProps) {
     return (
         <section
             id="experience-list"
-            className="py-16 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-950 text-center"
+            className="min-h-screen py-16 bg-gradient-to-r from-white via-indigo-50 to-white dark:from-gray-900 dark:via-gray-950 dark:to-black text-center"
         >
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white leading-relaxed lg:leading-snug mb-8 mx-auto">
                 Experience
