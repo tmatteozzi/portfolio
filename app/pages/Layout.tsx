@@ -43,10 +43,8 @@ export default function Layout({ content }: LayoutProps) {
     return (
         <section
             id="layout"
-            className="flex flex-col items-center justify-center h-[calc(100vh-60px)] mt-[60px] dark:bg-gray-950 bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative"
+            className="flex flex-col items-center justify-center h-[calc(100vh-60px)] mt-[60px] relative"
         >
-            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-gray-950 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:[mask-image:radial-gradient(ellipse_at_center,transparent_5%,black)]"></div>
-
             <div className="flex flex-col justify-center items-center relative z-10">
                 <motion.div {...motionConfig} className="text-center">
                     <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-gray-100 max-w-4xl leading-relaxed lg:leading-snug mb-4">
