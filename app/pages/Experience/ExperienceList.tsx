@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
-import Experience from './Experience';
-import { ExperienceProps } from './Experience';
+import Experience, { ExperienceProps } from './Experience';
 import { motion } from 'framer-motion';
 
 interface ExperienceListProps {
@@ -22,15 +21,13 @@ export default function ExperienceList({ experiences }: ExperienceListProps) {
     return (
         <section
             id="experience-list"
-            className="min-h-screen py-16 bg-gradient-to-r from-white via-indigo-50 to-white dark:from-gray-900 dark:via-gray-950 dark:to-black text-center"
+            className=" bg-gradient-to-r from-white via-indigo-50 to-white dark:from-gray-900 dark:via-gray-950 dark:to-black min-h-screen py-16 text-center"
         >
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white leading-relaxed lg:leading-snug mb-8 mx-auto">
                 Experience
             </h1>
             <motion.div
-                className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto ${
-                    experiences.length % 2 === 1 ? 'md:place-items-center' : ''
-                }`}
+                className="flex flex-wrap justify-center"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -39,7 +36,7 @@ export default function ExperienceList({ experiences }: ExperienceListProps) {
                     <motion.div
                         key={index}
                         variants={itemVariants}
-                        className={`flex items-stretch h-full mx-8 sm:mx-0`}
+                        className="flex items-stretch w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/5 mx-auto sm:mx-0 mb-4"
                     >
                         <Experience
                             companyName={experience.companyName}
