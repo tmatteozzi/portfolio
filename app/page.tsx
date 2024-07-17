@@ -14,6 +14,9 @@ import { Highlight } from './components/ui/card-stack';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 // ABOUT
 import me from './assets/me.jpg';
+// PORTFOLIO
+import gca from './assets/projects/gca.png';
+import ml from './assets/projects/ml.png';
 // TECHSTACK
 import HtmlIcon from './assets/icons/html.svg';
 import JavaIcon from './assets/icons/java.svg';
@@ -120,6 +123,39 @@ const about = {
     ]
 };
 
+const portfolioContent = [
+    {
+        title: 'Matteozzi Lavilla',
+        link: 'https://google.com',
+        thumbnail: ml.src,
+        technologies: [
+            {
+                name: 'React',
+                img: ReactIcon
+            },
+            {
+                name: 'Typescript',
+                img: TypescriptIcon
+            }
+        ]
+    },
+    {
+        title: 'Mazzo GCA',
+        link: 'https://google.com',
+        thumbnail: gca.src,
+        technologies: [
+            {
+                name: 'Angular',
+                img: AngularIcon
+            },
+            {
+                name: 'Typescript',
+                img: TypescriptIcon
+            }
+        ]
+    }
+];
+
 const experiences = [
     {
         companyName: 'Gecko',
@@ -219,7 +255,7 @@ export default function Home() {
             <Divider />
             <About content={about} />
             <Divider />
-            <Portfolio />
+            <Portfolio content={portfolioContent} />
             <Divider />
             <ExperienceList experiences={experiences} />
             <Divider />
