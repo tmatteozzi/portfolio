@@ -5,29 +5,17 @@ import { FiMenu, FiX } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import downloadPdf from '../utils/downloadPdf';
 
-export default function Navbar() {
+interface NavBarProps {
+    navBarItems: {
+        name: string;
+        link: string;
+    }[];
+}
+
+export default function Navbar({ navBarItems }: NavBarProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [showNavbar, setShowNavbar] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
-
-    const navItems = [
-        {
-            name: 'About',
-            link: 'about'
-        },
-        {
-            name: 'Portfolio',
-            link: 'portfolio'
-        },
-        {
-            name: 'Technologies',
-            link: 'tech-stack'
-        },
-        {
-            name: 'Contact',
-            link: 'contact'
-        }
-    ];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -49,7 +37,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-950 dark:to-black shadow-sm px-2 py-1.5 border-b border-gray-200 dark:border-gray-800 fixed top-0 w-full z-50 transition-transform duration-300 ${
+            className={`fixed top-0 w-full z-50 bg-transparent backdrop-blur-lg shadow-sm px-2 py-1.5 border-b border-gray-200 dark:border-gray-800 transition-transform duration-300 ${
                 showNavbar
                     ? 'transform translate-y-0'
                     : 'transform -translate-y-full'
@@ -58,7 +46,7 @@ export default function Navbar() {
             <div className="flex justify-between items-center">
                 <div className="ml-4 flex items-center space-x-4">
                     <button
-                        className="md:hidden block focus:outline-none"
+                        className="block md:hidden focus:outline-none"
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         <motion.div
@@ -74,9 +62,9 @@ export default function Navbar() {
                         </motion.div>
                     </button>
                     <div className="hidden md:flex items-center space-x-4">
-                        {navItems.map((item) => (
+                        {navBarItems.map((item) => (
                             <ScrollLink
-                                className="text-sm py-4 px-2 font-semibold text-black dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500 cursor-pointer"
+                                className="text-sm font-semibold text-black dark:text-white hover:text-indigo-300 py-4 px-2 cursor-pointer"
                                 key={item.name}
                                 to={item.link}
                                 smooth={true}
@@ -88,9 +76,9 @@ export default function Navbar() {
                         ))}
                     </div>
                 </div>
-                <button onClick={downloadPdf} className="p-[3px] relative mr-4">
+                <button onClick={downloadPdf} className="relative p-[3px] mr-4">
                     <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500 rounded-lg" />
-                    <div className="px-8 py-1.5 lg:py-1 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-gray-950 dark:hover:text-black text-xs md:text-base">
+                    <div className="relative px-8 py-1.5 lg:py-1 bg-transparent rounded-[6px] group transition duration-200 text-xs md:text-base font-semibold text-black dark:text-white hover:text-black dark:hover:text-black">
                         Resume
                     </div>
                 </button>
@@ -104,7 +92,7 @@ export default function Navbar() {
                         transition={{ duration: 0.3, delayChildren: 0.1 }}
                         className="md:hidden flex flex-col items-center mt-4"
                     >
-                        {navItems.map((item, index) => (
+                        {navBarItems.map((item, index) => (
                             <motion.div
                                 key={item.name}
                                 initial={{ opacity: 0, y: -20 }}
@@ -116,7 +104,7 @@ export default function Navbar() {
                                 className="mb-4"
                             >
                                 <ScrollLink
-                                    className="text-sm py-2 px-4 font-semibold text-black dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500 cursor-pointer"
+                                    className="text-sm font-semibold text-black dark:text-white hover:text-indigo-300 py-2 px-4 cursor-pointer"
                                     to={item.link}
                                     smooth={true}
                                     offset={-70}
