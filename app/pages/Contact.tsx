@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com';
+import Input from '../components/Input';
 
 interface ContactState {
     name: string;
@@ -34,7 +35,6 @@ export default function Contact() {
     ) => {
         const { name, value } = e.target;
         setFormData((prevState) => ({ ...prevState, [name]: value }));
-        // Clear error message when user starts typing again
         setErrors((prevErrors) => ({ ...prevErrors, [name]: '' }));
     };
 
@@ -52,7 +52,6 @@ export default function Contact() {
         });
 
         if (Object.keys(newErrors).length > 0) {
-            // If there are errors, set the state to display them
             setErrors(newErrors);
             return; // Prevent form submission
         }
@@ -83,19 +82,10 @@ export default function Contact() {
         );
     };
 
-    const inputStyles =
-        'shadow-inner dark:shadow-gray-850 appearance-none bg-gray-200 dark:bg-gray-900 dark:text-white rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-gray-300 dark:focus:bg-gray-600';
-    const textareaStyles =
-        'shadow-inner dark:shadow-gray-850 appearance-none bg-gray-200 dark:bg-gray-900 dark:text-white rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-gray-300 dark:focus:bg-gray-600';
-    const labelStyles =
-        'block text-gray-700 dark:text-white text-sm font-bold mb-2 text-left';
-    const inputHoverStyles =
-        'hover:bg-gradient-to-r from-indigo-100 to-purple-100 dark:hover:from-indigo-500 dark:hover:to-purple-500';
-
     return (
         <section
             id="contact"
-            className="pt-8 pb-16 py-4 bg-gradient-to-r from-gray-50 to-gray-50 dark:from-gray-900 dark:via-gray-950 dark:to-black text-center"
+            className="pt-8 pb-16 py-4 bg-gradient-to-r from-white via-indigo-50 to-white dark:from-gray-900 dark:via-gray-950 dark:to-black text-center"
         >
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white leading-relaxed lg:leading-snug mb-8 mx-auto">
                 Contact
@@ -107,53 +97,33 @@ export default function Contact() {
                         e.preventDefault();
                     }}
                 >
-                    <div className="mb-4 text-left">
-                        <label className={labelStyles}>Name:</label>
-                        <input
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                            className={`${inputStyles} ${inputHoverStyles}`}
-                        />
-                        {errors.name && (
-                            <p className="text-sm text-red-500">
-                                {errors.name}
-                            </p>
-                        )}
-                    </div>
-                    <div className="mb-4 text-left">
-                        <label className={labelStyles}>Email:</label>
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                            className={`${inputStyles} ${inputHoverStyles}`}
-                        />
-                        {errors.email && (
-                            <p className="text-sm text-red-500">
-                                {errors.email}
-                            </p>
-                        )}
-                    </div>
-                    <div className="mb-4 text-left">
-                        <label className={labelStyles}>Message:</label>
-                        <textarea
-                            name="message"
-                            value={formData.message}
-                            onChange={handleChange}
-                            required
-                            className={`${textareaStyles} ${inputHoverStyles}`}
-                        />
-                        {errors.message && (
-                            <p className="text-sm text-red-500">
-                                {errors.message}
-                            </p>
-                        )}
-                    </div>
+                    <Input
+                        label="Name"
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        error={errors.name}
+                    />
+                    <Input
+                        label="Email"
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        error={errors.email}
+                    />
+                    <Input
+                        label="Message"
+                        type="textarea"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        error={errors.message}
+                    />
                     <div className="flex justify-center">
                         <motion.button
                             onClick={handleSubmit}
