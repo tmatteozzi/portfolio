@@ -29,8 +29,27 @@ import ViteIcon from './assets/icons/vite.svg';
 import LinuxIcon from './assets/icons/linux.svg';
 import AngularIcon from './assets/icons/angular.svg';
 
+const navBarItems = [
+    {
+        name: 'About',
+        link: 'about'
+    },
+    {
+        name: 'Portfolio',
+        link: 'portfolio'
+    },
+    {
+        name: 'Technologies',
+        link: 'tech-stack'
+    },
+    {
+        name: 'Contact',
+        link: 'contact'
+    }
+];
+
 const layoutContent = {
-    name: 'Tomás Agustín Matteozzi!',
+    name: 'Tomás Agustín Matteozzi',
     description:
         'A passionate software developer committed to creating efficient and innovative solutions. Constantly learning and evolving, I bring a diverse set of skills to each project, enabling me to deliver high-quality, scalable applications.',
     buttonText: 'Download Resume',
@@ -195,7 +214,7 @@ const footerContent = {
 export default function Home() {
     return (
         <div>
-            <Navbar />
+            <Navbar navBarItems={navBarItems} />
             <Layout content={layoutContent} />
             <Divider />
             <About content={about} />
