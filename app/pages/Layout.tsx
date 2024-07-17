@@ -45,16 +45,13 @@ export default function Layout({ content }: LayoutProps) {
             id="layout"
             className="flex flex-col items-center justify-center h-[calc(100vh-60px)] mt-[60px] relative"
         >
-            <div className="flex flex-col justify-center items-center relative z-10">
+            <div className="flex flex-col justify-center items-center relative z-10 text-neutral-900  dark:text-gray-100">
                 <motion.div {...motionConfig} className="text-center">
-                    <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-gray-100 max-w-4xl leading-relaxed lg:leading-snug mb-4">
+                    <div className="text-2xl md:text-4xl lg:text-5xl font-bold max-w-4xl leading-relaxed lg:leading-snug mb-4">
                         Hi! I am <br className="md:hidden" />
-                        <Highlight className="text-black dark:text-white inline">
-                            {name}
-                        </Highlight>
-                        !
+                        <Highlight className="inline">{name}</Highlight>!
                     </div>
-                    <p className="text-l md:text-xl lg:text-xl font-bold text-neutral-700 dark:text-gray-100 max-w-4xl leading-relaxed lg:leading-snug mb-4 px-4">
+                    <p className="text-l md:text-xl lg:text-xl font-bold max-w-4xl leading-relaxed lg:leading-snug mb-4 px-4">
                         {description}
                     </p>
                     <motion.div
