@@ -8,6 +8,10 @@ interface TechStackProps {
 }
 
 export default function TechStack({ techStack }: TechStackProps) {
+    const sortedTechStack = [...techStack].sort((a, b) =>
+        a.name.localeCompare(b.name)
+    );
+
     return (
         <section
             id="tech-stack"
@@ -17,7 +21,7 @@ export default function TechStack({ techStack }: TechStackProps) {
                 Tech Stack
             </h1>
             <div className="flex flex-col sm:flex-row items-center justify-center flex-wrap gap-8 max-w-6xl mx-auto">
-                {techStack.map((item, index) => (
+                {sortedTechStack.map((item, index) => (
                     <div
                         key={index}
                         className="w-44 h-40 rounded-3xl p-4 shadow-xl border dark:border-gray-800 flex justify-center items-center transform transition-transform duration-300 hover:scale-105 dark:bg-gray-900"
