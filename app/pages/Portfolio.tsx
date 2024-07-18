@@ -25,7 +25,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                     {content.map((project, index) => (
                         <div
                             key={index}
-                            className="bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-800 shadow-lg rounded-lg overflow-hidden transition duration-300 hover:shadow-xl"
+                            className="bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-800 shadow-lg rounded-xl overflow-hidden transition duration-300 hover:shadow-xl"
                         >
                             <Link href={project.link}>
                                 <div className="relative h-64 overflow-hidden">
