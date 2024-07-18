@@ -53,12 +53,12 @@ export default function Contact() {
 
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
-            return; // Prevent form submission
+            return;
         }
 
-        const serviceId = 'service_9hwd8n9';
-        const templateId = 'template_65x3wfc';
-        const publicKey = 'F7o1xyqItrAmPmr6_';
+        const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+        const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+        const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 
         const templateParams = {
             from_name: formData.name,
