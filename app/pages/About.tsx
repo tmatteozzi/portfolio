@@ -17,9 +17,9 @@ export default function About({ content }: AboutProps) {
     return (
         <section
             id="about"
-            className="flex flex-col items-center pt-8 pb-16 py-4 bg-gradient-to-r from-white via-indigo-50 to-white dark:from-gray-900 dark:via-gray-950 dark:to-black"
+            className="flex flex-col items-center pt-8 pb-16 py-4 bg-gradient-to-r from-gray-900 via-gray-950 to-black"
         >
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-16 text-center lg:text-left">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white max-w-4xl leading-relaxed lg:leading-snug mb-16 text-center lg:text-left">
                 About me
             </h1>
             <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0 lg:space-x-20">
@@ -32,7 +32,7 @@ export default function About({ content }: AboutProps) {
                         alt="Tomás Matteozzi"
                         height={250}
                         width={250}
-                        className="border-4 rounded-full transition-transform duration-800 hover:scale-105 hover:border-4 border-indigo-300 dark:border-indigo-500 dark:hover:border-purple-500 hover:border-purple-300 shadow-xl hover:shadow-black/[0.15] shadow-black/[0.1]"
+                        className="border-4 rounded-full transition-transform duration-800 hover:scale-105 hover:border-4 border-indigo-500 hover:border-purple-500 shadow-xl hover:shadow-black/[0.15] shadow-black/[0.1]"
                     />
                 </div>
             </div>
