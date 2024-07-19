@@ -45,7 +45,7 @@ export default function Layout({ content }: LayoutProps) {
             id="layout"
             className="flex flex-col items-center justify-center h-[calc(100vh-60px)] mt-[60px] relative"
         >
-            <div className="flex flex-col justify-center items-center relative z-10 text-neutral-900  dark:text-gray-100">
+            <div className="flex flex-col justify-center items-center relative z-10 text-gray-100">
                 <motion.div {...motionConfig} className="text-center">
                     <div className="text-2xl md:text-4xl lg:text-5xl font-bold max-w-4xl leading-relaxed lg:leading-snug mb-4">
                         Hi! I am <br className="md:hidden" />
@@ -63,8 +63,8 @@ export default function Layout({ content }: LayoutProps) {
                             {...buttonMotionConfig}
                             className="p-[3px] relative mb-4"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500 rounded-lg" />
-                            <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-gray-950 dark:hover:text-black">
+                            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+                            <div className="px-8 py-2 rounded-[6px] relative group transition duration-200 font-semibold hover:bg-transparent bg-gray-950 hover:text-black">
                                 {buttonText}
                             </div>
                         </motion.button>
@@ -75,7 +75,7 @@ export default function Layout({ content }: LayoutProps) {
                                     href={link.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-gray-700 dark:text-white hover:text-indigo-300 dark:hover:text-indigo-500 transition-colors duration-300"
+                                    className="text-white hover:text-indigo-500 transition-colors duration-300"
                                 >
                                     {link.icon}
                                 </a>
