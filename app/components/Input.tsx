@@ -20,12 +20,12 @@ export default function Input({
     error = null
 }: InputProps) {
     const inputStyles =
-        'dark:text-white shadow-inner dark:shadow-gray-850 appearance-none bg-gray-200 dark:bg-gray-900 rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-gradient-to-r focus:from-indigo-100 focus:to-purple-100 dark:focus:from-indigo-500 dark:focus:to-purple-500';
-    const inputHoverStyles = 'hover:bg-gray-300 dark:hover:bg-gray-800';
+        'text-white shadow-inner shadow-gray-850 appearance-none bg-gray-900 rounded w-full py-3 px-3 leading-tight focus:outline-none focus:bg-gradient-to-r focus:from-indigo-500 focus:to-purple-500';
+    const inputHoverStyles = 'hover:bg-gray-800';
 
     return (
         <div className="mb-4 text-left">
-            <label className="block text-gray-700 dark:text-white text-sm font-bold mb-2 text-left">
+            <label className="block text-white text-sm font-bold mb-2 text-left">
                 {label}:
             </label>
             {type === 'textarea' ? (

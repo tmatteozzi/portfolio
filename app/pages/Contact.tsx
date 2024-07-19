@@ -85,9 +85,9 @@ export default function Contact() {
     return (
         <section
             id="contact"
-            className="pt-8 pb-16 py-4 bg-gradient-to-r from-white via-indigo-50 to-white dark:from-gray-900 dark:via-gray-950 dark:to-black text-center"
+            className="pt-8 pb-16 py-4 bg-gradient-to-r from-gray-900 via-gray-950 to-black text-center"
         >
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white leading-relaxed lg:leading-snug mb-8 mx-auto">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-relaxed lg:leading-snug mb-8 mx-auto">
                 Contact
             </h1>
             <div>
@@ -130,14 +130,14 @@ export default function Contact() {
                             {...buttonMotionConfig}
                             className="p-[3px] relative"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500 rounded-lg" />
-                            <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black font-semibold hover:bg-transparent dark:text-white dark:bg-gray-950 dark:hover:text-black">
+                            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+                            <div className="px-8 py-2 rounded-[6px] relative group transition duration-200 font-semibold hover:bg-transparent text-white bg-gray-950 hover:text-black">
                                 Send
                             </div>
                         </motion.button>
                     </div>
                     {response && (
-                        <p className="mt-2 text-sm text-indigo-300 dark:text-indigo-500 font-semibold">
+                        <p className="mt-2 text-sm text-indigo-500 font-semibold">
                             {response}
                         </p>
                     )}
