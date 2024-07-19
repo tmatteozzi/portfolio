@@ -37,7 +37,7 @@ export default function Navbar({ navBarItems }: NavBarProps) {
 
     return (
         <nav
-            className={`fixed top-0 w-full z-50 bg-transparent backdrop-blur-lg shadow-sm px-2 py-1.5 border-b border-gray-200 dark:border-gray-800 transition-transform duration-300 ${
+            className={`fixed top-0 w-full z-50 bg-transparent backdrop-blur-lg shadow-sm px-2 py-1.5 border-b border-gray-800 transition-transform duration-300 ${
                 showNavbar
                     ? 'transform translate-y-0'
                     : 'transform -translate-y-full'
@@ -55,16 +55,16 @@ export default function Navbar({ navBarItems }: NavBarProps) {
                             transition={{ duration: 0.3 }}
                         >
                             {isOpen ? (
-                                <FiX className="w-6 h-6 text-black dark:text-white" />
+                                <FiX className="w-6 h-6 text-white" />
                             ) : (
-                                <FiMenu className="w-6 h-6 text-black dark:text-white" />
+                                <FiMenu className="w-6 h-6 text-white" />
                             )}
                         </motion.div>
                     </button>
                     <div className="hidden md:flex items-center space-x-4">
                         {navBarItems.map((item) => (
                             <ScrollLink
-                                className="text-sm font-semibold text-black dark:text-white hover:text-indigo-300 py-4 px-2 cursor-pointer"
+                                className="text-sm font-semibold text-white hover:text-indigo-300 py-4 px-2 cursor-pointer"
                                 key={item.name}
                                 to={item.link}
                                 smooth={true}
@@ -77,8 +77,8 @@ export default function Navbar({ navBarItems }: NavBarProps) {
                     </div>
                 </div>
                 <button onClick={downloadPdf} className="relative p-[3px] mr-4">
-                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500 rounded-lg" />
-                    <div className="relative px-8 py-1.5 lg:py-1 bg-transparent rounded-[6px] group transition duration-200 text-xs md:text-base font-semibold text-black dark:text-white hover:text-black dark:hover:text-black">
+                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+                    <div className="relative px-8 py-1.5 lg:py-1 bg-transparent rounded-[6px] group transition duration-200 text-xs md:text-base font-semibold text-white hover:text-black">
                         Resume
                     </div>
                 </button>
@@ -104,7 +104,7 @@ export default function Navbar({ navBarItems }: NavBarProps) {
                                 className="mb-4"
                             >
                                 <ScrollLink
-                                    className="text-sm font-semibold text-black dark:text-white hover:text-indigo-300 py-2 px-4 cursor-pointer"
+                                    className="text-sm font-semibold text-white hover:text-indigo-300 py-2 px-4 cursor-pointer"
                                     to={item.link}
                                     smooth={true}
                                     offset={-70}
