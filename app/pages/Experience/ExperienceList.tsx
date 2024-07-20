@@ -16,9 +16,9 @@ export default function ExperienceList({ experiences }: ExperienceListProps) {
     return (
         <section
             id="experience-list"
-            className="bg-gradient-to-r from-white via-indigo-50 to-white dark:from-gray-900 dark:via-gray-950 dark:to-black min-h-screen py-16 text-center"
+            className="bg-gradient-to-r from-gray-900 via-gray-950 to-black min-h-screen py-16 text-center"
         >
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white leading-relaxed lg:leading-snug mb-8 mx-auto">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-relaxed lg:leading-snug mb-8 mx-auto">
                 Experience
             </h1>
             <motion.div

@@ -18,14 +18,14 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
     return (
         <section id="portfolio" className="min-h-screen py-20 text-center">
             <div className="container mx-auto px-6">
-                <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white leading-relaxed lg:leading-snug mb-16 mx-auto">
+                <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-relaxed lg:leading-snug mb-16 mx-auto">
                     Portfolio
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     {content.map((project, index) => (
                         <div
                             key={index}
-                            className="bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-800 shadow-lg rounded-xl overflow-hidden transition duration-300 hover:shadow-xl"
+                            className="bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 border-gray-800 shadow-lg rounded-xl overflow-hidden transition duration-300 hover:shadow-xl"
                         >
                             <Link href={project.link}>
                                 <div className="relative h-64 overflow-hidden">
@@ -39,10 +39,10 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                                 </div>
                             </Link>
                             <div className="p-6 text-left">
-                                <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                                <h3 className="text-2xl font-bold mb-4 text-white">
                                     {project.title}
                                 </h3>
-                                <ul className="flex flex-wrap items-center text-sm text-gray-700 dark:text-gray-300">
+                                <ul className="flex flex-wrap items-center text-sm text-gray-300">
                                     {project.technologies.map(
                                         (tech, techIndex) => (
                                             <li
