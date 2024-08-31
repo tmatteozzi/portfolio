@@ -21,7 +21,7 @@ export default function Experience({
 }: ExperienceProps) {
   return (
     <motion.div
-      className="bg-gray-950 border-slate-500 p-6 shadow-lg border rounded-xl"
+      className="bg-gradient-to-b from-gray-950 to-indigo-950 border-slate-500 p-6 shadow-lg border rounded-xl"
       whileHover="hover"
       variants={experienceVariants}
     >

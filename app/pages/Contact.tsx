@@ -81,7 +81,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="pt-8 pb-16 py-4 bg-gray-950 text-center">
+    <section
+      id="contact"
+      className="pt-8 pb-16 py-4 bg-gradient-to-b from-indigo-950 via-indigo-950 to-gray-950 text-center"
+    >
       <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-relaxed lg:leading-snug mb-8 mx-auto">
         Contact
       </h1>
