@@ -6,80 +6,80 @@ import { cn } from '@/app/utils/cn';
 let interval: any;
 
 type Card = {
-    id: number;
-    name: string;
-    content: React.ReactNode;
+  id: number;
+  name: string;
+  content: React.ReactNode;
 };
 
 export const CardStack = ({
-    items,
-    offset,
-    scaleFactor
+  items,
+  offset,
+  scaleFactor
 }: {
-    items: Card[];
-    offset?: number;
-    scaleFactor?: number;
+  items: Card[];
+  offset?: number;
+  scaleFactor?: number;
 }) => {
-    const CARD_OFFSET = offset || 10;
-    const SCALE_FACTOR = scaleFactor || 0.06;
-    const [cards, setCards] = useState<Card[]>(items);
+  const CARD_OFFSET = offset || 10;
+  const SCALE_FACTOR = scaleFactor || 0.06;
+  const [cards, setCards] = useState<Card[]>(items);
 
-    useEffect(() => {
-        startFlipping();
+  useEffect(() => {
+    startFlipping();
 
-        return () => clearInterval(interval);
-    }, []);
-    const startFlipping = () => {
-        interval = setInterval(() => {
-            setCards((prevCards: Card[]) => {
-                const newArray = [...prevCards]; // create a copy of the array
-                newArray.unshift(newArray.pop()!); // move the last element to the front
-                return newArray;
-            });
-        }, 5000);
-    };
+    return () => clearInterval(interval);
+  }, []);
+  const startFlipping = () => {
+    interval = setInterval(() => {
+      setCards((prevCards: Card[]) => {
+        const newArray = [...prevCards]; // create a copy of the array
+        newArray.unshift(newArray.pop()!); // move the last element to the front
+        return newArray;
+      });
+    }, 5000);
+  };
 
-    return (
-        <div className="relative  h-60 w-60 md:h-60 md:w-96">
-            {cards.map((card, index) => {
-                return (
-                    <motion.div
-                        key={card.id}
-                        className="absolute bg-gray-900 h-60 w-60 md:h-60 md:w-96 rounded-3xl p-4 shadow-xl border border-white/[0.1]  shadow-white/[0.025] flex flex-col justify-top"
-                        style={{
-                            transformOrigin: 'top center'
-                        }}
-                        animate={{
-                            top: index * -CARD_OFFSET,
-                            scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind
-                            zIndex: cards.length - index //  decrease z-index for the cards that are behind
-                        }}
-                    >
-                        <p className=" font-semibold text-white">{card.name}</p>
-                        <div className="mt-4 font-normal text-neutral-200">
-                            {card.content}
-                        </div>
-                    </motion.div>
-                );
-            })}
-        </div>
-    );
+  return (
+    <div className="relative  h-60 w-60 md:h-60 md:w-96">
+      {cards.map((card, index) => {
+        return (
+          <motion.div
+            key={card.id}
+            className="absolute bg-gray-950 h-60 w-96 rounded-3xl p-6 shadow-xl border border-gray-500  shadow-white/[0.025] flex flex-col justify-top"
+            style={{
+              transformOrigin: 'top center'
+            }}
+            animate={{
+              top: index * -CARD_OFFSET,
+              scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind
+              zIndex: cards.length - index //  decrease z-index for the cards that are behind
+            }}
+          >
+            <p className=" font-semibold text-white">{card.name}</p>
+            <div className="mt-4 font-normal text-neutral-200">
+              {card.content}
+            </div>
+          </motion.div>
+        );
+      })}
+    </div>
+  );
 };
 export const Highlight = ({
-    children,
-    className
+  children,
+  className
 }: {
-    children: React.ReactNode;
-    className?: string;
+  children: React.ReactNode;
+  className?: string;
 }) => {
-    return (
-        <span
-            className={cn(
-                'font-bold bg-indigo-700/[0.2] text-indigo-500 px-1 py-0.5',
-                className
-            )}
-        >
-            {children}
-        </span>
-    );
+  return (
+    <span
+      className={cn(
+        'font-bold bg-indigo-700/[0.2] text-indigo-500 px-1 py-0.5',
+        className
+      )}
+    >
+      {children}
+    </span>
+  );
 };

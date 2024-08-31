@@ -38,9 +38,9 @@ export default function Hero() {
   return (
     <section
       id="layout"
-      className="flex flex-col items-center justify-center h-screen pt-16 relative bg-gradient-to-b from-indigo-950 via-black to-black"
+      className="flex flex-col items-center justify-center h-screen pt-16 relative bg-gradient-to-b from-indigo-950 via-gray-950 to-gray-950"
     >
-      <div className="flex flex-col items-center text-gray-200 relative z-10">
+      <div className="flex flex-col items-center text-gray-100 relative z-10">
         <motion.div
           {...motionConfig}
           className="flex flex-col items-center text-center"
@@ -73,7 +73,7 @@ export default function Hero() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-indigo-500 transition-colors duration-300"
+                  className="hover:text-indigo-500 transition-colors duration-300"
                 >
                   {link.icon}
                 </a>
