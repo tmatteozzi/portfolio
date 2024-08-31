@@ -1,4 +1,3 @@
-import Divider from './components/Divider';
 import Navbar from './pages/Navbar';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -237,11 +236,8 @@ export default function Home() {
       <About content={about} />
       <Portfolio content={portfolioContent} />
       <ExperienceList experiences={experiences} />
-      <Divider />
       <TechStack techStack={techStack} />
-      <Divider />
       <Contact />
-      <Divider />
       <Footer content={footerContent} />
     </div>
   );
