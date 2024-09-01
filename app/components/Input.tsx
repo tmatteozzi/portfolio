@@ -20,7 +20,7 @@ export default function Input({
   error = null
 }: InputProps) {
   const inputStyles =
-    'border-2 border-gray-300 bg-transparent text-white shadow-inner shadow-gray-850 appearance-none rounded-xl w-full py-3 px-3 leading-tight focus:outline-none focus:border-gray-100';
+    'border border-gray-300 bg-transparent text-white shadow-inner shadow-gray-850 appearance-none rounded-xl w-full py-3 px-3 leading-tight focus:outline-none focus:border-gray-100';
   const inputHoverStyles = 'hover:border-gray-100';
 
   return (

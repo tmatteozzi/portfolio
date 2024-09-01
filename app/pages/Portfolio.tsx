@@ -20,7 +20,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
       id="portfolio"
       className="min-h-screen py-16 text-center bg-gray-900"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8 max-w-6xl">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-50 leading-relaxed lg:leading-snug mb-12 sm:mb-16 mx-auto">
           Portfolio
         </h1>
