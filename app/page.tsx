@@ -16,6 +16,8 @@ import me from './assets/me.jpg';
 // PORTFOLIO
 import gca from './assets/projects/gca.png';
 import ml from './assets/projects/ml.png';
+import teamtasker from './assets/projects/teamtasker.png';
+import weekly from './assets/projects/weekly.png';
 // TECHSTACK
 import HtmlIcon from './assets/icons/html.svg';
 import JavaIcon from './assets/icons/java.svg';
@@ -117,6 +119,10 @@ const portfolioContent = [
       {
         name: 'Typescript',
         img: TypescriptIcon
+      },
+      {
+        name: 'NextJS',
+        img: NextJSIcon
       }
     ]
   },
@@ -132,6 +138,44 @@ const portfolioContent = [
       {
         name: 'Typescript',
         img: TypescriptIcon
+      }
+    ]
+  },
+  {
+    title: 'Weekly',
+    link: 'https://google.com',
+    thumbnail: weekly.src,
+    technologies: [
+      {
+        name: 'React',
+        img: ReactIcon
+      },
+      {
+        name: 'JavaScript',
+        img: JavascriptIcon
+      },
+      {
+        name: 'NextJS',
+        img: NextJSIcon
+      }
+    ]
+  },
+  {
+    title: 'Team Tasker',
+    link: 'https://google.com',
+    thumbnail: teamtasker.src,
+    technologies: [
+      {
+        name: 'React',
+        img: ReactIcon
+      },
+      {
+        name: 'JavaScript',
+        img: JavascriptIcon
+      },
+      {
+        name: 'NextJS',
+        img: NextJSIcon
       }
     ]
   }
