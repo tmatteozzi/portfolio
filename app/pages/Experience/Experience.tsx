@@ -30,7 +30,7 @@ export default function Experience({
       variants={experienceVariants}
     >
       <div>
-        <h4 className="text-xs sm:text-sm md:text-base font-light text-gray-400 mb-2">
+        <h4 className="text-xs sm:text-sm md:text-base text-gray-400 mb-2">
           {companyName}
         </h4>
         <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-50 mb-2">
