@@ -52,7 +52,7 @@ export default function Hero() {
               {...buttonMotionConfig}
               className="relative mb-4 sm:mb-6 p-[0.2vw]"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-indigo-800 rounded-lg" />
               <div className="px-4 sm:px-6 py-2 rounded-[6px] relative group transition duration-300 font-medium hover:bg-transparent bg-gray-900 hover:text-black text-xs sm:text-sm">
                 Download Resume
               </div>
