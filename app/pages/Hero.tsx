@@ -34,13 +34,13 @@ export default function Hero() {
           {...motionConfig}
           className="flex flex-col items-center text-center"
         >
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-full leading-tight sm:leading-relaxed mb-4 sm:mb-6 font-medium tracking-tighter">
-            Hi! I am <br className="md:hidden flex flex-col" />
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-full leading-relaxed sm:leading-relaxed  mb-6 font-medium tracking-tighter">
+            Hi! I am <br className="md:hidden" />
             <Highlight className="inline-block text-2xl sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap overflow-hidden">
               Tomás Agustín Matteozzi
             </Highlight>
           </h1>
-          <p className="max-w-3xl text-xs sm:text-sm md:text-base leading-relaxed mb-6 sm:mb-8 px-2 sm:px-4">
+          <p className="max-w-3xl text-xs sm:text-sm md:text-base leading-relaxed mb-6 px-2 sm:px-4">
             A passionate software developer committed to creating efficient and
             innovative solutions. Constantly learning and evolving, I bring a
             diverse set of skills to each project, enabling me to deliver
@@ -50,7 +50,7 @@ export default function Hero() {
             <motion.button
               onClick={downloadPdf}
               {...buttonMotionConfig}
-              className="relative mb-4 sm:mb-6 p-[0.2vw]"
+              className="relative mb-6 p-[0.4vw] md:p-[0.2vw]"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-indigo-800 rounded-lg" />
               <div className="px-4 sm:px-6 py-2 rounded-[6px] relative group transition duration-300 font-medium hover:bg-transparent bg-gray-900 hover:text-black text-xs sm:text-sm">
