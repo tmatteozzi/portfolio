@@ -18,7 +18,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
   return (
     <section
       id="portfolio"
-      className="min-h-screen py-16 text-center bg-gray-950"
+      className="min-h-screen py-16 text-center bg-gray-900"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-50 leading-relaxed lg:leading-snug mb-12 sm:mb-16 mx-auto">
@@ -28,7 +28,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
           {content.map((project, index) => (
             <div
               key={index}
-              className="border border-gray-500 rounded-2xl overflow-hidden transition duration-300 hover:shadow-xl"
+              className="border border-gray-300 rounded-2xl overflow-hidden transition duration-300 hover:shadow-xl"
             >
               <Link href={project.link}>
                 <div className="p-3">
@@ -39,7 +39,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                         alt={project.title}
                         layout="fill"
                         objectFit="cover"
-                        className="transition-transform duration-500 hover:scale-105 opacity-90"
+                        className="transition-transform duration-500 hover:scale-105 opacity-95"
                       />
                     </div>
                   </div>

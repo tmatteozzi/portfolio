@@ -27,9 +27,9 @@ export default function Hero() {
   return (
     <section
       id="layout"
-      className="flex flex-col items-center justify-center min-h-screen py-16 px-4 sm:px-6 md:px-8 relative bg-gradient-to-b from-indigo-950 via-gray-950 to-gray-950"
+      className="flex flex-col items-center justify-center min-h-screen py-16 px-4 sm:px-6 md:px-8 relative bg-gradient-to-b from-indigo-950 via-gray-900 to-gray-900"
     >
-      <div className="flex flex-col items-center text-gray-50 relative z-10 w-full max-w-4xl pt-16">
+      <div className="flex flex-col items-center text-white relative z-10 w-full max-w-4xl pt-16">
         <motion.div
           {...motionConfig}
           className="flex flex-col items-center text-center"
@@ -53,7 +53,7 @@ export default function Hero() {
               className="relative mb-4 sm:mb-6 p-[0.2vw]"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-              <div className="px-4 sm:px-6 py-2 rounded-[6px] relative group transition duration-300 font-medium hover:bg-transparent bg-gray-950 hover:text-black text-xs sm:text-sm">
+              <div className="px-4 sm:px-6 py-2 rounded-[6px] relative group transition duration-300 font-medium hover:bg-transparent bg-gray-900 hover:text-black text-xs sm:text-sm">
                 Download Resume
               </div>
             </motion.button>

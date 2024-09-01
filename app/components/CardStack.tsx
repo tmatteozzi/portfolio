@@ -42,7 +42,7 @@ export const CardStack = ({
       {cards.map((card, index) => (
         <motion.div
           key={card.id}
-          className="absolute bg-gradient-to-b from-gray-950 via-gray-950 to-indigo-950 h-72 w-[40vw] rounded-3xl p-6 shadow-xl border border-gray-500 shadow-white/[0.025] flex flex-col justify-top"
+          className="absolute bg-gradient-to-b from-gray-900 via-gray-900 to-indigo-950 h-72 w-[40vw] rounded-3xl p-6 shadow-xl border border-gray-300 shadow-white/[0.025] flex flex-col justify-top"
           style={{
             transformOrigin: 'top center'
           }}
@@ -54,19 +54,19 @@ export const CardStack = ({
         >
           <button
             onClick={handlePrev}
-            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-50 text-2xl"
+            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-300 hover:text-white text-2xl"
           >
             {'<'}
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-50 text-2xl"
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-300 hover:text-white text-2xl"
           >
             {'>'}
           </button>
           <div className="px-8">
-            <p className="font-semibold text-lg text-gray-50">{card.name}</p>
-            <div className="mt-4 font-normal text-neutral-200">
+            <p className="font-semibold text-lg text-white">{card.name}</p>
+            <div className="mt-4 font-normal text-neutral-100">
               {card.content}
             </div>
           </div>

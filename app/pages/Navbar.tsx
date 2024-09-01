@@ -43,7 +43,7 @@ export default function Navbar({ navBarItems }: NavBarProps) {
   return (
     <>
       <motion.nav
-        className="fixed top-0 left-0 right-0 z-50 bg-background text-gray-50"
+        className="fixed top-0 left-0 right-0 z-50 bg-background text-white"
         initial={false}
         animate={showNavbar ? { y: 0 } : { y: '-100%' }}
         transition={{ duration: 0.3 }}
@@ -61,9 +61,9 @@ export default function Navbar({ navBarItems }: NavBarProps) {
                 transition={{ duration: 0.3 }}
               >
                 {isOpen ? (
-                  <FiX className="w-6 h-6 text-gray-50 hover:text-indigo-500" />
+                  <FiX className="w-6 h-6 text-white hover:text-indigo-500" />
                 ) : (
-                  <FiMenu className="w-6 h-6 text-gray-50 hover:text-indigo-500" />
+                  <FiMenu className="w-6 h-6 text-white hover:text-indigo-500" />
                 )}
               </motion.div>
             </button>
@@ -116,7 +116,7 @@ export default function Navbar({ navBarItems }: NavBarProps) {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    className="block py-2 text-sm font-medium text-gray-50 hover:text-indigo-500 transition-colors cursor-pointer"
+                    className="block py-2 text-sm font-medium text-white hover:text-indigo-500 transition-colors cursor-pointer"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}

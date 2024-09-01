@@ -12,7 +12,7 @@ export default function Footer({ content }: FooterProps) {
   const { name, role, socialLinks } = content;
 
   return (
-    <footer className="bg-gray-950 text-center py-6">
+    <footer className="bg-gray-900 text-center py-6">
       <div className="container mx-auto">
         <h2 className="text-lg font-bold text-white">© {name}</h2>
         <p className="text-sm font-semibold text-neutral-400 mt-2">{role}</p>

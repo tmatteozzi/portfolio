@@ -79,9 +79,9 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="pt-16 pb-16 py-4 bg-gradient-to-b from-indigo-950 via-indigo-950 to-gray-950 text-center"
+      className="pt-16 pb-16 py-4 bg-gradient-to-b from-indigo-950 via-indigo-950 to-gray-900 text-center"
     >
-      <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-50 leading-relaxed lg:leading-snug mb-8 mx-auto">
+      <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-relaxed lg:leading-snug mb-8 mx-auto">
         Contact
       </h1>
       <div>
@@ -124,7 +124,7 @@ export default function Contact() {
               {...buttonMotionConfig}
               className="p-[3px] relative"
             >
-              <div className="px-8 py-2 rounded-[6px] border-[0.2vw] relative group transition duration-200 font-semibold text-white border-gray-500 hover:bg-indigo-950 hover:border-gray-300">
+              <div className="px-8 py-2 rounded-[6px] border-[0.2vw] relative group transition duration-200 font-semibold text-white border-gray-300 hover:bg-indigo-950 hover:border-gray-100">
                 Send
               </div>
             </motion.button>
