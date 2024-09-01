@@ -18,7 +18,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
   return (
     <section
       id="portfolio"
-      className="min-h-screen py-20 text-center bg-gray-950"
+      className="min-h-screen py-16 text-center bg-gray-950"
     >
       <div className="container mx-auto px-6">
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-100 leading-relaxed lg:leading-snug mb-16 mx-auto">
