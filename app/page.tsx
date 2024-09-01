@@ -7,7 +7,7 @@ import Portfolio from './pages/Portfolio';
 import TechStack from './pages/TechStack';
 import ExperienceList from './pages/Experience/ExperienceList';
 
-import { Highlight } from './components/ui/card-stack';
+import { Highlight } from './components/Highlight';
 
 // LAYOUT
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
