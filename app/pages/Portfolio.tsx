@@ -37,9 +37,10 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                       <Image
                         src={project.thumbnail}
                         alt={project.title}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        style={{ objectFit: 'cover' }}
                         className="transition-transform duration-300 hover:scale-105 opacity-95"
+                        priority
                       />
                     </div>
                   </div>
