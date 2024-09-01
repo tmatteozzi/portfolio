@@ -39,7 +39,7 @@ export const CardStack = ({
 
   return (
     <div className="flex flex-col items-center">
-      <div className="relative flex justify-center items-center w-full h-[300px] sm:h-[350px] mb-4 sm:mb-0">
+      <div className="relative flex justify-center items-center w-full h-[350px] mb-4 sm:mb-0">
         <div className="relative w-full h-full md:max-w-2xl mx-3.5">
           {cards.map((card, index) => (
             <motion.div
