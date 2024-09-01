@@ -20,7 +20,7 @@ export default function About({ content }: AboutProps) {
       <h1 className="text-5xl text-center font-medium text-gray-50 ">
         About me
       </h1>
-      <div className="flex flex-col items-center justify-center w-full my-32">
+      <div className="flex flex-col items-center justify-center w-full mt-16 mb-32">
         <CardStack offset={6} items={items} />
       </div>
     </section>
