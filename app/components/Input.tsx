@@ -46,6 +46,16 @@ export default function Input({
           className={`${inputStyles} ${inputHoverStyles}`}
         />
       )}
+      <style jsx>{`
+        input:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+          box-shadow: 0 0 0px 1000px transparent inset;
+          -webkit-text-fill-color: #f9fafb !important;
+          backdrop-filter: blur(10px);
+          background-color: none !important;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+      `}</style>
       {error && <p className="text-sm text-red-500 mt-2">{error}</p>}
     </div>
   );
