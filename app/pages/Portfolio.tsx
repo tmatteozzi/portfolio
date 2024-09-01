@@ -32,7 +32,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
             >
               <Link href={project.link}>
                 <div className="p-3">
-                  <div className="border border-gray-500 m-3.5 rounded-xl overflow-hidden">
+                  <div className="border border-gray-300 m-3.5 rounded-xl overflow-hidden">
                     <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
                       <Image
                         src={project.thumbnail}
