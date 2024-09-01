@@ -30,13 +30,17 @@ export default function Experience({
       variants={experienceVariants}
     >
       <div>
-        <h4 className="text-sm font-light text-gray-400 mb-2">{companyName}</h4>
-        <h3 className="text-md font-bold text-gray-50 mb-2">{role}</h3>
-        <p className="text-sm font-medium text-gray-400 mb-4 overflow-hidden">
+        <h4 className="text-xs sm:text-sm font-light text-gray-400 mb-2">
+          {companyName}
+        </h4>
+        <h3 className="text-sm sm:text-md font-bold text-gray-50 mb-2">
+          {role}
+        </h3>
+        <p className="text-xs sm:text-sm font-medium text-gray-400 mb-4 overflow-hidden">
           {description}
         </p>
       </div>
-      <p className="text-sm text-gray-300">
+      <p className="text-xs sm:text-sm text-gray-300">
         <strong>Duration:</strong> {duration}
       </p>
     </motion.div>
