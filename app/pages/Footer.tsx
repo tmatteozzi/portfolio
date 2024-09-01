@@ -15,7 +15,7 @@ export default function Footer({ content }: FooterProps) {
     <footer className="bg-gray-900 text-center py-6">
       <div className="container mx-auto">
         <h2 className="text-lg font-bold text-white">© {name}</h2>
-        <p className="text-sm font-semibold text-neutral-400 mt-2">{role}</p>
+        <p className="text-sm font-semibold text-gray-400 mt-2">{role}</p>
         <div className="flex justify-center space-x-6 mt-4">
           {socialLinks.map((link, index) => (
             <a

@@ -38,40 +38,64 @@ export const CardStack = ({
   };
 
   return (
-    <div className="relative flex justify-center items-center w-full h-full">
-      {cards.map((card, index) => (
-        <motion.div
-          key={card.id}
-          className="absolute bg-gradient-to-b from-gray-900 via-gray-900 to-indigo-950 h-72 w-[40vw] rounded-3xl p-6 shadow-xl border border-gray-300 shadow-white/[0.025] flex flex-col justify-top"
-          style={{
-            transformOrigin: 'top center'
-          }}
-          animate={{
-            top: index * -CARD_OFFSET,
-            scale: 1 - index * SCALE_FACTOR,
-            zIndex: cards.length - index
-          }}
+    <div className="flex flex-col items-center">
+      <div className="relative flex justify-center items-center w-full h-[300px] sm:h-[350px] mb-4 sm:mb-0">
+        <div className="relative w-full h-full md:max-w-2xl mx-3.5">
+          {cards.map((card, index) => (
+            <motion.div
+              key={card.id}
+              className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-900 to-indigo-950 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl border border-gray-300 shadow-white/[0.025] flex flex-col justify-top overflow-hidden"
+              style={{
+                transformOrigin: 'top center'
+              }}
+              animate={{
+                top: index * -(CARD_OFFSET * (1 - index * 0.1)),
+                scale: 1 - index * (SCALE_FACTOR * 0.8),
+                zIndex: cards.length - index
+              }}
+            >
+              <div className="p-2">
+                <p className="font-semibold text-base sm:text-lg text-white">
+                  {card.name}
+                </p>
+                <div className="mt-2 sm:mt-4 text-sm sm:text-base font-normal text-neutral-100 max-h-[180px] sm:max-h-[220px] md:max-h-[260px]">
+                  {card.content}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        <button
+          onClick={handlePrev}
+          className="hidden sm:block absolute left-0 sm:left-[-30px] md:left-[-60px] top-1/2 transform -translate-y-1/2 z-10 p-2 text-gray-300 hover:text-white text-xl sm:text-2xl"
+          aria-label="Previous card"
         >
-          <button
-            onClick={handlePrev}
-            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-300 hover:text-white text-2xl"
-          >
-            {'<'}
-          </button>
-          <button
-            onClick={handleNext}
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-300 hover:text-white text-2xl"
-          >
-            {'>'}
-          </button>
-          <div className="px-8">
-            <p className="font-semibold text-lg text-white">{card.name}</p>
-            <div className="mt-4 font-normal text-neutral-100">
-              {card.content}
-            </div>
-          </div>
-        </motion.div>
-      ))}
+          {'<'}
+        </button>
+        <button
+          onClick={handleNext}
+          className="hidden sm:block absolute right-0 sm:right-[-30px] md:right-[-60px] top-1/2 transform -translate-y-1/2 z-10 p-2 text-gray-300 hover:text-white text-xl sm:text-2xl"
+          aria-label="Next card"
+        >
+          {'>'}
+        </button>
+      </div>
+      <div className="flex justify-center space-x-4 sm:hidden">
+        <button
+          onClick={handlePrev}
+          className="p-2 text-gray-300 hover:text-white text-2xl"
+          aria-label="Previous card"
+        >
+          {'<'}
+        </button>
+        <button
+          onClick={handleNext}
+          className="p-2 text-gray-300 hover:text-white text-2xl"
+          aria-label="Next card"
+        >
+          {'>'}
+        </button>
+      </div>
     </div>
   );
 };

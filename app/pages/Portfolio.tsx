@@ -39,7 +39,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                         alt={project.title}
                         layout="fill"
                         objectFit="cover"
-                        className="transition-transform duration-500 hover:scale-105 opacity-95"
+                        className="transition-transform duration-300 hover:scale-105 opacity-95"
                       />
                     </div>
                   </div>
