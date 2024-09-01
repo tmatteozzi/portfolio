@@ -15,7 +15,7 @@ export default function About({ content }: AboutProps) {
   return (
     <section
       id="about"
-      className="flex flex-col items-center py-32 bg-gray-950 min-h-[69vw]"
+      className="flex flex-col items-center py-32 bg-gray-950 min-h-screen max-h-screen"
     >
       <h1 className="text-5xl text-center font-medium text-gray-100 ">
         About me
