@@ -37,7 +37,7 @@ export default function Navbar({ navBarItems }: NavBarProps) {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 bg-transparent backdrop-blur-lg shadow-sm px-2 py-1.5 transition-transform duration-300 ${
+      className={`fixed top-0 w-full z-50 bg-transparent px-2 py-1.5 transition-transform duration-300 ${
         showNavbar ? 'transform translate-y-0' : 'transform -translate-y-full'
       }`}
     >
@@ -74,11 +74,11 @@ export default function Navbar({ navBarItems }: NavBarProps) {
             ))}
           </div>
         </div>
-        <button onClick={downloadPdf} className="relative p-[3px] mr-4">
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-          <div className="relative px-8 py-1.5 lg:py-1 bg-transparent rounded-[6px] group transition duration-200 text-base text-white hover:text-black">
-            Resume
-          </div>
+        <button
+          onClick={downloadPdf}
+          className="relative p-[3px] mr-8 text-gray-100"
+        >
+          Resume
         </button>
       </div>
       <AnimatePresence>
