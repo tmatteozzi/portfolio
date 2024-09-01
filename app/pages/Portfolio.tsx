@@ -28,20 +28,24 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
           {content.map((project, index) => (
             <div
               key={index}
-              className="border border-gray-500 rounded-xl overflow-hidden transition duration-300 hover:shadow-xl"
+              className="border border-gray-500 rounded-2xl overflow-hidden transition duration-300 hover:shadow-xl"
             >
               <Link href={project.link}>
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={project.thumbnail}
-                    alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 hover:scale-105"
-                  />
+                <div className="p-3">
+                  <div className="border border-gray-500 m-3.5 rounded-xl overflow-hidden">
+                    <div className="relative h-64 overflow-hidden">
+                      <Image
+                        src={project.thumbnail}
+                        alt={project.title}
+                        layout="fill"
+                        objectFit="cover"
+                        className="transition-transform duration-300 hover:scale-105"
+                      />
+                    </div>
+                  </div>
                 </div>
               </Link>
-              <div className="p-6 text-left">
+              <div className="px-6 pb-6 text-left">
                 <h3 className="text-2xl font-bold mb-4 text-white">
                   {project.title}
                 </h3>
