@@ -124,7 +124,7 @@ export default function Contact() {
               {...buttonMotionConfig}
               className="p-[3px] relative"
             >
-              <div className="px-8 py-2 rounded-[6px] border-[0.2vw] relative group transition duration-200 font-semibold text-white border-gray-300 hover:bg-indigo-950 hover:border-gray-100">
+              <div className="px-8 py-2 rounded-[6px] border-2 relative group transition duration-200 font-semibold text-white border-gray-300 hover:bg-indigo-950 hover:border-gray-100">
                 Send
               </div>
             </motion.button>
