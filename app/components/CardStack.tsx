@@ -42,7 +42,7 @@ export const CardStack = ({
       {cards.map((card, index) => (
         <motion.div
           key={card.id}
-          className="absolute bg-gradient-to-b from-gray-950 to-indigo-950 h-72 w-[40vw] rounded-3xl p-6 shadow-xl border border-gray-500 shadow-white/[0.025] flex flex-col justify-top"
+          className="absolute bg-gradient-to-b from-gray-950 via-gray-950 to-indigo-950 h-72 w-[40vw] rounded-3xl p-6 shadow-xl border border-gray-500 shadow-white/[0.025] flex flex-col justify-top"
           style={{
             transformOrigin: 'top center'
           }}
