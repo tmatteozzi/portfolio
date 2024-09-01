@@ -53,16 +53,16 @@ export default function Navbar({ navBarItems }: NavBarProps) {
               transition={{ duration: 0.3 }}
             >
               {isOpen ? (
-                <FiX className="w-6 h-6 text-white" />
+                <FiX className="w-6 h-6 text-gray-50" />
               ) : (
-                <FiMenu className="w-6 h-6 text-white" />
+                <FiMenu className="w-6 h-6 text-gray-50" />
               )}
             </motion.div>
           </button>
           <div className="hidden md:flex items-center space-x-4">
             {navBarItems.map((item) => (
               <ScrollLink
-                className="text-sm font-medium text-white hover:text-indigo-300 py-4 px-2 cursor-pointer"
+                className="text-sm font-medium text-gray-50 hover:text-indigo-300 py-4 px-2 cursor-pointer"
                 key={item.name}
                 to={item.link}
                 smooth={true}
@@ -76,7 +76,7 @@ export default function Navbar({ navBarItems }: NavBarProps) {
         </div>
         <button
           onClick={downloadPdf}
-          className="relative p-[3px] mr-8 text-gray-100"
+          className="relative p-[3px] mr-8 text-gray-50"
         >
           Resume
         </button>
@@ -102,7 +102,7 @@ export default function Navbar({ navBarItems }: NavBarProps) {
                 className="mb-4"
               >
                 <ScrollLink
-                  className="text-sm font-semibold text-white hover:text-indigo-300 py-2 px-4 cursor-pointer"
+                  className="text-sm font-semibold text-gray-50 hover:text-indigo-300 py-2 px-4 cursor-pointer"
                   to={item.link}
                   smooth={true}
                   offset={-70}

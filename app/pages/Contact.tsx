@@ -11,10 +11,6 @@ interface ContactState {
 }
 
 const buttonMotionConfig = {
-  whileHover: {
-    scale: 1.1,
-    transition: { duration: 0.3 }
-  },
   whileTap: {
     scale: 0.9
   }
@@ -85,7 +81,7 @@ export default function Contact() {
       id="contact"
       className="pt-16 pb-16 py-4 bg-gradient-to-b from-indigo-950 via-indigo-950 to-gray-950 text-center"
     >
-      <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-relaxed lg:leading-snug mb-8 mx-auto">
+      <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-50 leading-relaxed lg:leading-snug mb-8 mx-auto">
         Contact
       </h1>
       <div>
@@ -128,16 +124,13 @@ export default function Contact() {
               {...buttonMotionConfig}
               className="p-[3px] relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-              <div className="px-8 py-2 rounded-[6px] relative group transition duration-200 font-semibold hover:bg-transparent text-white bg-gray-950 hover:text-black">
+              <div className="px-8 py-2 rounded-[6px] border-[0.2vw] relative group transition duration-200 font-semibold text-white border-gray-500 hover:bg-indigo-950 hover:border-gray-300">
                 Send
               </div>
             </motion.button>
           </div>
           {response && (
-            <p className="mt-2 text-sm text-indigo-500 font-semibold">
-              {response}
-            </p>
+            <p className="mt-4 text-sm text-gray-200 font-medium">{response}</p>
           )}
         </form>
       </div>

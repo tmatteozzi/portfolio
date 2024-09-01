@@ -21,7 +21,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
       className="min-h-screen py-16 text-center bg-gray-950"
     >
       <div className="container mx-auto px-6">
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-100 leading-relaxed lg:leading-snug mb-16 mx-auto">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-50 leading-relaxed lg:leading-snug mb-16 mx-auto">
           Portfolio
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -46,7 +46,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
                 </div>
               </Link>
               <div className="px-6 pb-6 text-left">
-                <h3 className="text-2xl font-bold mb-4 text-white">
+                <h3 className="text-2xl font-bold mb-4 text-gray-50">
                   {project.title}
                 </h3>
                 <ul className="flex flex-wrap items-center text-sm text-gray-300">

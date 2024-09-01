@@ -27,7 +27,7 @@ export default function Experience({
     >
       <div>
         <h4 className="text-sm font-light text-gray-400 mb-2">{companyName}</h4>
-        <h3 className="text-md font-bold text-white mb-2">{role}</h3>
+        <h3 className="text-md font-bold text-gray-50 mb-2">{role}</h3>
         <p className="text-sm font-medium text-gray-400 mb-4 overflow-hidden">
           {description}
         </p>

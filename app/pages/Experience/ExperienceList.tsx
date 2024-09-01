@@ -18,7 +18,7 @@ export default function ExperienceList({ experiences }: ExperienceListProps) {
       id="experience-list"
       className="bg-gray-950 min-h-screen py-16 text-center"
     >
-      <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-relaxed lg:leading-snug mb-16 mx-auto">
+      <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-50 leading-relaxed lg:leading-snug mb-16 mx-auto">
         Experience
       </h1>
       <motion.div

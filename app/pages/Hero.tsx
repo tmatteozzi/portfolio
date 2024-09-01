@@ -40,12 +40,12 @@ export default function Hero() {
       id="layout"
       className="flex flex-col items-center justify-center h-screen pt-16 relative bg-gradient-to-b from-indigo-950 via-gray-950 to-gray-950"
     >
-      <div className="flex flex-col items-center text-gray-100 relative z-10">
+      <div className="flex flex-col items-center text-gray-50 relative z-10">
         <motion.div
           {...motionConfig}
           className="flex flex-col items-center text-center"
         >
-          <div className="text-5xl max-w-5xl leading-relaxed mb-6 font-medium">
+          <div className="text-5xl max-w-5xl leading-relaxed mb-6 font-medium tracking-tighter">
             Hi! I am <br className="md:hidden" />
             <Highlight className="inline">Tomás Agustín Matteozzi</Highlight>!
           </div>
