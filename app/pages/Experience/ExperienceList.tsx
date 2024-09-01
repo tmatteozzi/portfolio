@@ -30,7 +30,7 @@ export default function ExperienceList({ experiences }: ExperienceListProps) {
           <motion.div
             key={index}
             variants={itemVariants}
-            className="w-full mx-8 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2"
+            className="w-full mx-3.5 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2"
           >
             <Experience
               companyName={experience.companyName}

@@ -10,7 +10,11 @@ export interface ExperienceProps {
 }
 
 const experienceVariants = {
-  hover: { scale: 1.05, boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)' }
+  hover: {
+    scale: 1.05,
+    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+    transition: { duration: 0.3 }
+  }
 };
 
 export default function Experience({
