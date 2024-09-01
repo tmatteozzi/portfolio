@@ -86,7 +86,7 @@ export default function Contact() {
       </h1>
       <div>
         <form
-          className="max-w-6xl mx-auto py-4 px-5"
+          className="max-w-6xl mx-auto py-4 px-5 md:px-8"
           onSubmit={(e) => {
             e.preventDefault();
           }}
