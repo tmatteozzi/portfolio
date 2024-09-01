@@ -24,7 +24,7 @@ export default function TechStack({ techStack }: TechStackProps) {
         {sortedTechStack.map((item, index) => (
           <div
             key={index}
-            className="w-44 h-40 rounded-3xl p-4 shadow-xl border border-gray-300 flex justify-center items-center transform transition-transform duration-300 hover:scale-105"
+            className="w-44 h-40 rounded-3xl p-4 shadow-xl border border-gray-300 hover:border-gray-100 flex justify-center items-center transform transition-transform duration-300 hover:scale-105"
           >
             <div className="flex flex-col items-center p-4">
               <item.img width={80} height={80} />
