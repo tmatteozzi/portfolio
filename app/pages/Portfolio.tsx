@@ -5,6 +5,7 @@ import gca from '@/public/projects/gca.png';
 import ml from '@/public/projects/ml.png';
 import teamtasker from '@/public/projects/teamtasker.png';
 import weekly from '@/public/projects/weekly.png';
+import mazzo from '@/public/projects/mazzo.png';
 // ICONS
 import JavascriptIcon from '@/public/icons/javascript.svg';
 import TypescriptIcon from '@/public/icons/typescript.svg';
@@ -15,9 +16,9 @@ import AngularIcon from '@/public/icons/angular.svg';
 export default function Portfolio() {
   const content = [
     {
-      title: 'Matteozzi Lavilla',
+      title: 'Mazzo Developments',
       link: 'https://google.com',
-      thumbnail: ml.src,
+      thumbnail: mazzo.src,
       technologies: [
         {
           name: 'React',
@@ -26,6 +27,25 @@ export default function Portfolio() {
         {
           name: 'Typescript',
           img: TypescriptIcon
+        },
+        {
+          name: 'NextJS',
+          img: NextJSIcon
+        }
+      ]
+    },
+    {
+      title: 'Weekly',
+      link: 'https://google.com',
+      thumbnail: weekly.src,
+      technologies: [
+        {
+          name: 'React',
+          img: ReactIcon
+        },
+        {
+          name: 'JavaScript',
+          img: JavascriptIcon
         },
         {
           name: 'NextJS',
@@ -49,17 +69,17 @@ export default function Portfolio() {
       ]
     },
     {
-      title: 'Weekly',
+      title: 'Matteozzi Lavilla',
       link: 'https://google.com',
-      thumbnail: weekly.src,
+      thumbnail: ml.src,
       technologies: [
         {
           name: 'React',
           img: ReactIcon
         },
         {
-          name: 'JavaScript',
-          img: JavascriptIcon
+          name: 'Typescript',
+          img: TypescriptIcon
         },
         {
           name: 'NextJS',
@@ -97,16 +117,16 @@ export default function Portfolio() {
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-50 leading-relaxed lg:leading-snug mb-12 sm:mb-16 mx-auto">
           Portfolio
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
+        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
           {content.map((project, index) => (
             <div
               key={index}
-              className="border border-gray-300 rounded-2xl overflow-hidden transition duration-300 hover:shadow-xl"
+              className="border border-gray-300 rounded-2xl overflow-hidden transition duration-300 hover:shadow-xl w-[100%] md:w-[98%] lg:w-[520px] lg:h-[420px] mx-auto"
             >
               <Link href={project.link}>
                 <div className="p-3">
                   <div className="border border-gray-300 m-3.5 rounded-xl overflow-hidden">
-                    <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
+                    <div className="relative h-48 md:h-56 lg:h-64 overflow-hidden">
                       <Image
                         src={project.thumbnail}
                         alt={project.title}

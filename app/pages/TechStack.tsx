@@ -81,7 +81,7 @@ export default function TechStack() {
       <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-relaxed lg:leading-snug mb-16 mx-auto">
         Tech Stack
       </h1>
-      <div className="flex sm:flex-row items-center justify-center flex-wrap gap-8 max-w-6xl mx-auto">
+      <div className="flex sm:flex-row items-center justify-center flex-wrap gap-8 max-w-6xl md:mx-3.5 mx-auto">
         {sortedTechStack.map((item, index) => (
           <div
             key={index}
