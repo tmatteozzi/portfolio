@@ -1,9 +1,8 @@
 'use client';
-
 import { motion } from 'framer-motion';
+import { HeroHighlight } from '../components/HeroHighlight';
 import downloadPdf from '../utils/downloadPdf';
-import { Highlight } from '../components/ui/highlight';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { ReactNode } from 'react';
 
 const motionConfig = {
   initial: { opacity: 0, y: 20 },
@@ -15,15 +14,11 @@ const buttonMotionConfig = {
   whileTap: { scale: 0.9 }
 };
 
-const socialLinks = [
-  { url: 'https://github.com/tmatteozzi', icon: <FaGithub size={24} /> },
-  {
-    url: 'https://www.linkedin.com/in/tmatteozzi',
-    icon: <FaLinkedin size={24} />
-  }
-];
+interface HeroProps {
+  socialLinks: { url: string; icon: ReactNode }[];
+}
 
-export default function Hero() {
+export default function Hero({ socialLinks }: HeroProps) {
   return (
     <section
       id="layout"
@@ -36,9 +31,9 @@ export default function Hero() {
         >
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-full leading-relaxed sm:leading-relaxed  mb-6 font-medium tracking-tighter">
             Hi! I am <br className="md:hidden" />
-            <Highlight className="inline-block text-2xl sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap overflow-hidden">
+            <HeroHighlight className="inline-block text-2xl sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap overflow-hidden">
               Tomás Agustín Matteozzi
-            </Highlight>
+            </HeroHighlight>
           </h1>
           <p className="max-w-3xl text-xs sm:text-sm md:text-base leading-relaxed mb-6 px-2 sm:px-4">
             A passionate software developer committed to creating efficient and

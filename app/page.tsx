@@ -1,16 +1,23 @@
-import Navbar from './pages/Navbar';
+import Navbar from './components/Navbar';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Hero from './pages/Hero';
-import Footer from './pages/Footer';
+import Footer from './components/Footer';
 import Portfolio from './pages/Portfolio';
 import TechStack from './pages/TechStack';
 import ExperienceList from './pages/Experience/ExperienceList';
 
 import { Highlight } from './components/Highlight';
 
-// LAYOUT
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+// SOCIAL LINKS
+const socialLinks = [
+  { url: 'https://github.com/tmatteozzi', icon: <FaGithub size={24} /> },
+  {
+    url: 'https://www.linkedin.com/in/tomás-matteozzi-452b3728b',
+    icon: <FaLinkedin size={24} />
+  }
+];
+
 // ABOUT
 import me from './assets/me.jpg';
 // PORTFOLIO
@@ -32,6 +39,7 @@ import NextJSIcon from './assets/icons/nextjs.svg';
 import ViteIcon from './assets/icons/vite.svg';
 import LinuxIcon from './assets/icons/linux.svg';
 import AngularIcon from './assets/icons/angular.svg';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const navBarItems = [
   {
@@ -280,29 +288,17 @@ const techStack = [
   }
 ];
 
-const footerContent = {
-  name: 'Tomás Agustín Matteozzi',
-  role: 'Software Engineer',
-  socialLinks: [
-    { url: 'https://github.com/tmatteozzi', icon: <FaGithub size={25} /> },
-    {
-      url: 'https://www.linkedin.com/in/tomás-matteozzi-452b3728b',
-      icon: <FaLinkedin size={25} />
-    }
-  ]
-};
-
 export default function Home() {
   return (
     <div>
       <Navbar navBarItems={navBarItems} />
-      <Hero />
+      <Hero socialLinks={socialLinks} />
       <About content={about} />
       <Portfolio content={portfolioContent} />
       <ExperienceList experiences={experiences} />
       <TechStack techStack={techStack} />
       <Contact />
-      <Footer content={footerContent} />
+      <Footer socialLinks={socialLinks} />
     </div>
   );
 }

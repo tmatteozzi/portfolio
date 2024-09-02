@@ -61,9 +61,9 @@ export default function Navbar({ navBarItems }: NavBarProps) {
                 transition={{ duration: 0.3 }}
               >
                 {isOpen ? (
-                  <FiX className="w-6 h-6 text-white hover:text-indigo-500" />
+                  <FiX className="w-6 h-6 text-white" />
                 ) : (
-                  <FiMenu className="w-6 h-6 text-white hover:text-indigo-500" />
+                  <FiMenu className="w-6 h-6 text-white" />
                 )}
               </motion.div>
             </button>
