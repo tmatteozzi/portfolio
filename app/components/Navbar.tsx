@@ -1,18 +1,18 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import downloadPdf from '../utils/downloadPdf';
 
 interface NavBarProps {
-  navBarItems: {
+  navbarLinks: {
     name: string;
     link: string;
   }[];
 }
 
-export default function Navbar({ navBarItems }: NavBarProps) {
+export default function Navbar({ navbarLinks }: NavBarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -68,7 +68,7 @@ export default function Navbar({ navBarItems }: NavBarProps) {
               </motion.div>
             </button>
             <div className="hidden md:flex items-center space-x-6">
-              {navBarItems.map((item) => (
+              {navbarLinks.map((item) => (
                 <ScrollLink
                   key={item.name}
                   to={item.link}
@@ -109,7 +109,7 @@ export default function Navbar({ navBarItems }: NavBarProps) {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="space-y-4">
-                {navBarItems.map((item) => (
+                {navbarLinks.map((item) => (
                   <ScrollLink
                     key={item.name}
                     to={item.link}

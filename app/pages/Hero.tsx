@@ -29,13 +29,13 @@ export default function Hero({ socialLinks }: HeroProps) {
           {...motionConfig}
           className="flex flex-col items-center text-center"
         >
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-full leading-relaxed sm:leading-relaxed  mb-6 font-medium tracking-tighter">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-full leading-relaxed sm:leading-relaxed mb-4 md:mb-6 font-medium tracking-tighter">
             Hi! I am <br className="md:hidden" />
             <HeroHighlight className="inline-block text-2xl sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap overflow-hidden">
               Tomás Agustín Matteozzi
             </HeroHighlight>
           </h1>
-          <p className="max-w-3xl text-xs sm:text-sm md:text-base leading-relaxed mb-6 px-2 sm:px-4">
+          <p className="max-w-3xl text-xs sm:text-sm md:text-base leading-relaxed mb-4 md:mb-6 px-2 sm:px-4">
             A passionate software developer committed to creating efficient and
             innovative solutions. Constantly learning and evolving, I bring a
             diverse set of skills to each project, enabling me to deliver
