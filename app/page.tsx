@@ -9,6 +9,8 @@ import ExperienceList from './pages/Experience/ExperienceList';
 
 import { Highlight } from './components/Highlight';
 
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+
 // SOCIAL LINKS
 const socialLinks = [
   { url: 'https://github.com/tmatteozzi', icon: <FaGithub size={24} /> },
@@ -17,29 +19,6 @@ const socialLinks = [
     icon: <FaLinkedin size={24} />
   }
 ];
-
-// ABOUT
-import me from './assets/me.jpg';
-// PORTFOLIO
-import gca from './assets/projects/gca.png';
-import ml from './assets/projects/ml.png';
-import teamtasker from './assets/projects/teamtasker.png';
-import weekly from './assets/projects/weekly.png';
-// TECHSTACK
-import HtmlIcon from './assets/icons/html.svg';
-import JavaIcon from './assets/icons/java.svg';
-import JavascriptIcon from './assets/icons/javascript.svg';
-import TypescriptIcon from './assets/icons/typescript.svg';
-import PythonIcon from './assets/icons/python.svg';
-import CssIcon from './assets/icons/css.svg';
-import ReactIcon from './assets/icons/react.svg';
-import MySQLIcon from './assets/icons/mysql.svg';
-import TailwindIcon from './assets/icons/tailwind.svg';
-import NextJSIcon from './assets/icons/nextjs.svg';
-import ViteIcon from './assets/icons/vite.svg';
-import LinuxIcon from './assets/icons/linux.svg';
-import AngularIcon from './assets/icons/angular.svg';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const navBarItems = [
   {
@@ -61,7 +40,6 @@ const navBarItems = [
 ];
 
 const about = {
-  image: me.src,
   items: [
     {
       id: 0,
@@ -134,81 +112,6 @@ const about = {
   ]
 };
 
-const portfolioContent = [
-  {
-    title: 'Matteozzi Lavilla',
-    link: 'https://google.com',
-    thumbnail: ml.src,
-    technologies: [
-      {
-        name: 'React',
-        img: ReactIcon
-      },
-      {
-        name: 'Typescript',
-        img: TypescriptIcon
-      },
-      {
-        name: 'NextJS',
-        img: NextJSIcon
-      }
-    ]
-  },
-  {
-    title: 'Mazzo GCA',
-    link: 'https://google.com',
-    thumbnail: gca.src,
-    technologies: [
-      {
-        name: 'Angular',
-        img: AngularIcon
-      },
-      {
-        name: 'Typescript',
-        img: TypescriptIcon
-      }
-    ]
-  },
-  {
-    title: 'Weekly',
-    link: 'https://google.com',
-    thumbnail: weekly.src,
-    technologies: [
-      {
-        name: 'React',
-        img: ReactIcon
-      },
-      {
-        name: 'JavaScript',
-        img: JavascriptIcon
-      },
-      {
-        name: 'NextJS',
-        img: NextJSIcon
-      }
-    ]
-  },
-  {
-    title: 'Team Tasker',
-    link: 'https://google.com',
-    thumbnail: teamtasker.src,
-    technologies: [
-      {
-        name: 'React',
-        img: ReactIcon
-      },
-      {
-        name: 'JavaScript',
-        img: JavascriptIcon
-      },
-      {
-        name: 'NextJS',
-        img: NextJSIcon
-      }
-    ]
-  }
-];
-
 const experiences = [
   {
     companyName: 'Gecko',
@@ -233,70 +136,15 @@ const experiences = [
   }
 ];
 
-const techStack = [
-  {
-    name: 'Python',
-    img: PythonIcon
-  },
-  {
-    name: 'Java',
-    img: JavaIcon
-  },
-  {
-    name: 'Javascript',
-    img: JavascriptIcon
-  },
-  {
-    name: 'Typescript',
-    img: TypescriptIcon
-  },
-  {
-    name: 'React',
-    img: ReactIcon
-  },
-  {
-    name: 'NextJS',
-    img: NextJSIcon
-  },
-  {
-    name: 'Angular',
-    img: AngularIcon
-  },
-  {
-    name: 'Vite',
-    img: ViteIcon
-  },
-  {
-    name: 'HTML',
-    img: HtmlIcon
-  },
-  {
-    name: 'CSS',
-    img: CssIcon
-  },
-  {
-    name: 'MySQL',
-    img: MySQLIcon
-  },
-  {
-    name: 'Linux',
-    img: LinuxIcon
-  },
-  {
-    name: 'Tailwind',
-    img: TailwindIcon
-  }
-];
-
 export default function Home() {
   return (
     <div>
       <Navbar navBarItems={navBarItems} />
       <Hero socialLinks={socialLinks} />
       <About content={about} />
-      <Portfolio content={portfolioContent} />
+      <Portfolio />
       <ExperienceList experiences={experiences} />
-      <TechStack techStack={techStack} />
+      <TechStack />
       <Contact />
       <Footer socialLinks={socialLinks} />
     </div>

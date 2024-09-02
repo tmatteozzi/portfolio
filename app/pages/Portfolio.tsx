@@ -1,20 +1,94 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+// THUMBNAILS
+import gca from '../assets/projects/gca.png';
+import ml from '../assets/projects/ml.png';
+import teamtasker from '../assets/projects/teamtasker.png';
+import weekly from '../assets/projects/weekly.png';
+// ICONS
+import JavascriptIcon from '../assets/icons/javascript.svg';
+import TypescriptIcon from '../assets/icons/typescript.svg';
+import ReactIcon from '../assets/icons/react.svg';
+import NextJSIcon from '../assets/icons/nextjs.svg';
+import AngularIcon from '../assets/icons/angular.svg';
 
-interface PortfolioProps {
-  content: {
-    title: string;
-    link: string;
-    thumbnail: string;
-    technologies: {
-      img: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
-      name: string;
-    }[];
-  }[];
-}
+export default function Portfolio() {
+  const content = [
+    {
+      title: 'Matteozzi Lavilla',
+      link: 'https://google.com',
+      thumbnail: ml.src,
+      technologies: [
+        {
+          name: 'React',
+          img: ReactIcon
+        },
+        {
+          name: 'Typescript',
+          img: TypescriptIcon
+        },
+        {
+          name: 'NextJS',
+          img: NextJSIcon
+        }
+      ]
+    },
+    {
+      title: 'Mazzo GCA',
+      link: 'https://google.com',
+      thumbnail: gca.src,
+      technologies: [
+        {
+          name: 'Angular',
+          img: AngularIcon
+        },
+        {
+          name: 'Typescript',
+          img: TypescriptIcon
+        }
+      ]
+    },
+    {
+      title: 'Weekly',
+      link: 'https://google.com',
+      thumbnail: weekly.src,
+      technologies: [
+        {
+          name: 'React',
+          img: ReactIcon
+        },
+        {
+          name: 'JavaScript',
+          img: JavascriptIcon
+        },
+        {
+          name: 'NextJS',
+          img: NextJSIcon
+        }
+      ]
+    },
+    {
+      title: 'Team Tasker',
+      link: 'https://google.com',
+      thumbnail: teamtasker.src,
+      technologies: [
+        {
+          name: 'React',
+          img: ReactIcon
+        },
+        {
+          name: 'JavaScript',
+          img: JavascriptIcon
+        },
+        {
+          name: 'NextJS',
+          img: NextJSIcon
+        }
+      ]
+    }
+  ];
 
-const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
   return (
     <section
       id="portfolio"
@@ -68,6 +142,4 @@ const Portfolio: React.FC<PortfolioProps> = ({ content }) => {
       </div>
     </section>
   );
-};
-
-export default Portfolio;
+}

@@ -1,13 +1,74 @@
 import React from 'react';
+// ICONS
+import HtmlIcon from '../assets/icons/html.svg';
+import JavaIcon from '../assets/icons/java.svg';
+import JavascriptIcon from '../assets/icons/javascript.svg';
+import TypescriptIcon from '../assets/icons/typescript.svg';
+import PythonIcon from '../assets/icons/python.svg';
+import CssIcon from '../assets/icons/css.svg';
+import ReactIcon from '../assets/icons/react.svg';
+import MySQLIcon from '../assets/icons/mysql.svg';
+import TailwindIcon from '../assets/icons/tailwind.svg';
+import NextJSIcon from '../assets/icons/nextjs.svg';
+import ViteIcon from '../assets/icons/vite.svg';
+import LinuxIcon from '../assets/icons/linux.svg';
+import AngularIcon from '../assets/icons/angular.svg';
 
-interface TechStackProps {
-  techStack: {
-    name: string;
-    img: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
-  }[];
-}
-
-export default function TechStack({ techStack }: TechStackProps) {
+export default function TechStack() {
+  const techStack = [
+    {
+      name: 'Python',
+      img: PythonIcon
+    },
+    {
+      name: 'Java',
+      img: JavaIcon
+    },
+    {
+      name: 'Javascript',
+      img: JavascriptIcon
+    },
+    {
+      name: 'Typescript',
+      img: TypescriptIcon
+    },
+    {
+      name: 'React',
+      img: ReactIcon
+    },
+    {
+      name: 'NextJS',
+      img: NextJSIcon
+    },
+    {
+      name: 'Angular',
+      img: AngularIcon
+    },
+    {
+      name: 'Vite',
+      img: ViteIcon
+    },
+    {
+      name: 'HTML',
+      img: HtmlIcon
+    },
+    {
+      name: 'CSS',
+      img: CssIcon
+    },
+    {
+      name: 'MySQL',
+      img: MySQLIcon
+    },
+    {
+      name: 'Linux',
+      img: LinuxIcon
+    },
+    {
+      name: 'Tailwind',
+      img: TailwindIcon
+    }
+  ];
   const sortedTechStack = [...techStack].sort((a, b) =>
     a.name.localeCompare(b.name)
   );
