@@ -1,18 +1,18 @@
 import React from 'react';
 // ICONS
-import HtmlIcon from '../assets/icons/html.svg';
-import JavaIcon from '../assets/icons/java.svg';
-import JavascriptIcon from '../assets/icons/javascript.svg';
-import TypescriptIcon from '../assets/icons/typescript.svg';
-import PythonIcon from '../assets/icons/python.svg';
-import CssIcon from '../assets/icons/css.svg';
-import ReactIcon from '../assets/icons/react.svg';
-import MySQLIcon from '../assets/icons/mysql.svg';
-import TailwindIcon from '../assets/icons/tailwind.svg';
-import NextJSIcon from '../assets/icons/nextjs.svg';
-import ViteIcon from '../assets/icons/vite.svg';
-import LinuxIcon from '../assets/icons/linux.svg';
-import AngularIcon from '../assets/icons/angular.svg';
+import HtmlIcon from '@/public/icons/html.svg';
+import JavaIcon from '@/public/icons/java.svg';
+import JavascriptIcon from '@/public/icons/javascript.svg';
+import TypescriptIcon from '@/public/icons/typescript.svg';
+import PythonIcon from '@/public/icons/python.svg';
+import CssIcon from '@/public/icons/css.svg';
+import ReactIcon from '@/public/icons/react.svg';
+import MySQLIcon from '@/public/icons/mysql.svg';
+import TailwindIcon from '@/public/icons/tailwind.svg';
+import NextJSIcon from '@/public/icons/nextjs.svg';
+import ViteIcon from '@/public/icons/vite.svg';
+import LinuxIcon from '@/public/icons/linux.svg';
+import AngularIcon from '@/public/icons/angular.svg';
 
 export default function TechStack() {
   const techStack = [

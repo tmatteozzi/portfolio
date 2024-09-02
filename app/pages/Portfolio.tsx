@@ -1,17 +1,16 @@
-import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 // THUMBNAILS
-import gca from '../assets/projects/gca.png';
-import ml from '../assets/projects/ml.png';
-import teamtasker from '../assets/projects/teamtasker.png';
-import weekly from '../assets/projects/weekly.png';
+import gca from '@/public/projects/gca.png';
+import ml from '@/public/projects/ml.png';
+import teamtasker from '@/public/projects/teamtasker.png';
+import weekly from '@/public/projects/weekly.png';
 // ICONS
-import JavascriptIcon from '../assets/icons/javascript.svg';
-import TypescriptIcon from '../assets/icons/typescript.svg';
-import ReactIcon from '../assets/icons/react.svg';
-import NextJSIcon from '../assets/icons/nextjs.svg';
-import AngularIcon from '../assets/icons/angular.svg';
+import JavascriptIcon from '@/public/icons/javascript.svg';
+import TypescriptIcon from '@/public/icons/typescript.svg';
+import ReactIcon from '@/public/icons/react.svg';
+import NextJSIcon from '@/public/icons/nextjs.svg';
+import AngularIcon from '@/public/icons/angular.svg';
 
 export default function Portfolio() {
   const content = [
