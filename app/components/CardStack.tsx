@@ -40,7 +40,7 @@ export const CardStack = ({
   return (
     <div className="flex flex-col items-center">
       <div className="relative flex justify-center items-center w-full h-[300px] sm:h-[350px] mb-4 sm:mb-0">
-        <div className="relative w-full h-full md:max-w-2xl mx-3.5">
+        <div className="relative w-full h-full md:max-w-2xl">
           {cards.map((card, index) => (
             <motion.div
               key={card.id}
@@ -67,20 +67,20 @@ export const CardStack = ({
         </div>
         <button
           onClick={handlePrev}
-          className="hidden sm:block absolute left-0 sm:left-[-30px] md:left-[-60px] top-1/2 transform -translate-y-1/2 z-10 p-2 text-gray-300 hover:text-white text-xl sm:text-2xl"
+          className="hidden md:block absolute left-0 sm:left-[-60px] top-1/2 transform -translate-y-1/2 z-10 p-2 text-gray-300 hover:text-white text-xl sm:text-2xl"
           aria-label="Previous card"
         >
           {'<'}
         </button>
         <button
           onClick={handleNext}
-          className="hidden sm:block absolute right-0 sm:right-[-30px] md:right-[-60px] top-1/2 transform -translate-y-1/2 z-10 p-2 text-gray-300 hover:text-white text-xl sm:text-2xl"
+          className="hidden md:block absolute right-0 sm:right-[-60px] top-1/2 transform -translate-y-1/2 z-10 p-2 text-gray-300 hover:text-white text-xl sm:text-2xl"
           aria-label="Next card"
         >
           {'>'}
         </button>
       </div>
-      <div className="flex justify-center space-x-4 sm:hidden">
+      <div className="flex justify-center space-x-4 md:hidden">
         <button
           onClick={handlePrev}
           className="p-2 text-gray-300 hover:text-white text-2xl"

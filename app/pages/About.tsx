@@ -76,7 +76,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-center py-16 md:py-32 bg-gray-900 min-h-[screen/2] px-1.5 md:px-0"
+      className="flex flex-col items-center justify-center py-16 md:py-32 bg-gray-900 min-h-[screen/2] mx-3.5 md:px-0"
     >
       <h1 className="text-3xl md:text-5xl text-center font-medium text-white mb-16">
         About me
