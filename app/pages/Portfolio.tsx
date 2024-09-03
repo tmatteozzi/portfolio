@@ -111,9 +111,9 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="min-h-screen py-16 text-center bg-gray-900"
+      className="min-h-screen py-16 text-center bg-gray-900 mx-8"
     >
-      <div className="container mx-auto px-5 sm:px-6 lg:px-8 max-w-6xl">
+      <div className="container mx-auto max-w-6xl">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-50 leading-relaxed lg:leading-snug mb-12 sm:mb-16 mx-auto">
           Portfolio
         </h1>
@@ -121,11 +121,11 @@ export default function Portfolio() {
           {content.map((project, index) => (
             <div
               key={index}
-              className="border border-gray-300 rounded-2xl overflow-hidden transition duration-300 hover:shadow-xl w-[100%] md:w-[98%] lg:w-[520px] lg:h-[420px] mx-auto"
+              className="border border-gray-300 rounded-2xl overflow-hidden transition duration-300 hover:shadow-xl w-[100%] lg:w-[520px] lg:h-[420px] mx-auto"
             >
               <Link href={project.link}>
                 <div className="p-3">
-                  <div className="border border-gray-300 m-3.5 rounded-xl overflow-hidden">
+                  <div className="border border-gray-300 m-2.5 sm:m-3.5 rounded-xl overflow-hidden">
                     <div className="relative h-48 md:h-56 lg:h-64 overflow-hidden">
                       <Image
                         src={project.thumbnail}

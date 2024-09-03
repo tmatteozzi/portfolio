@@ -81,58 +81,62 @@ export default function Contact() {
       id="contact"
       className="pt-16 pb-16 py-4 bg-gradient-to-b from-indigo-950 via-indigo-950 to-gray-900 text-center"
     >
-      <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-relaxed lg:leading-snug mb-8 mx-auto">
-        Contact
-      </h1>
-      <div>
-        <form
-          className="max-w-6xl mx-auto py-4 px-5 md:px-8"
-          onSubmit={(e) => {
-            e.preventDefault();
-          }}
-        >
-          <Input
-            label="Name"
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            error={errors.name}
-          />
-          <Input
-            label="Email"
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            error={errors.email}
-          />
-          <Input
-            label="Message"
-            type="textarea"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            error={errors.message}
-          />
-          <div className="flex justify-center">
-            <motion.button
-              onClick={handleSubmit}
-              {...buttonMotionConfig}
-              className="p-[3px] relative"
-            >
-              <div className="px-8 py-2 rounded-[6px] border-2 relative group transition duration-200 font-semibold text-white border-gray-300 hover:bg-indigo-950 hover:border-gray-100">
-                Send
-              </div>
-            </motion.button>
-          </div>
-          {response && (
-            <p className="mt-4 text-sm text-gray-200 font-medium">{response}</p>
-          )}
-        </form>
+      <div className="mx-8">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-relaxed lg:leading-snug mb-8 mx-auto">
+          Contact
+        </h1>
+        <div>
+          <form
+            className="max-w-6xl mx-auto py-4"
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}
+          >
+            <Input
+              label="Name"
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              error={errors.name}
+            />
+            <Input
+              label="Email"
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              error={errors.email}
+            />
+            <Input
+              label="Message"
+              type="textarea"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              error={errors.message}
+            />
+            <div className="flex justify-center">
+              <motion.button
+                onClick={handleSubmit}
+                {...buttonMotionConfig}
+                className="p-[3px] relative"
+              >
+                <div className="px-8 py-2 rounded-[6px] border-2 relative group transition duration-200 font-semibold text-white border-gray-300 hover:bg-indigo-950 hover:border-gray-100">
+                  Send
+                </div>
+              </motion.button>
+            </div>
+            {response && (
+              <p className="mt-4 text-sm text-gray-200 font-medium">
+                {response}
+              </p>
+            )}
+          </form>
+        </div>
       </div>
     </section>
   );
