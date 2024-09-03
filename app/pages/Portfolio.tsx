@@ -117,11 +117,11 @@ export default function Portfolio() {
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-50 leading-relaxed lg:leading-snug mb-12 sm:mb-16 mx-auto">
           Portfolio
         </h1>
-        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 w-full max-w-6xl">
           {content.map((project, index) => (
             <div
               key={index}
-              className="border border-gray-300 rounded-2xl overflow-hidden transition duration-300 hover:shadow-xl w-[100%] lg:w-[520px] lg:h-[420px] mx-auto"
+              className="border border-gray-300 rounded-2xl overflow-hidden transition duration-300 hover:shadow-xl w-[100%] lg:w-[47.9%] lg:h-[420px]"
             >
               <Link href={project.link}>
                 <div className="p-3">
