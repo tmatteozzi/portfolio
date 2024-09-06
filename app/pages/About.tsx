@@ -1,5 +1,5 @@
-import { CardStack } from '../components/CardStack';
-import { Highlight } from '../components/Highlight';
+import CardStack from '../components/CardStack';
+import Highlight from '../components/Highlight';
 
 export default function About() {
   const items = [

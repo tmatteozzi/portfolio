@@ -8,7 +8,7 @@ type Card = {
   content: React.ReactNode;
 };
 
-export const CardStack = ({
+export default function CardStack({
   items,
   offset,
   scaleFactor
@@ -16,7 +16,7 @@ export const CardStack = ({
   items: Card[];
   offset?: number;
   scaleFactor?: number;
-}) => {
+}) {
   const CARD_OFFSET = offset || 10;
   const SCALE_FACTOR = scaleFactor || 0.06;
   const [cards, setCards] = useState<Card[]>(items);
@@ -84,4 +84,4 @@ export const CardStack = ({
       </div>
     </div>
   );
-};
+}

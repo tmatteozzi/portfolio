@@ -3,13 +3,13 @@ import { cn } from '../utils/cn';
 import { motion } from 'framer-motion';
 import React from 'react';
 
-export const HeroHighlight = ({
+export default function HeroHighlight({
   children,
   className
 }: {
   children: React.ReactNode;
   className?: string;
-}) => {
+}) {
   return (
     <motion.span
       initial={{
@@ -36,4 +36,4 @@ export const HeroHighlight = ({
       {children}
     </motion.span>
   );
-};
+}

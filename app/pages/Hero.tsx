@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { HeroHighlight } from '../components/HeroHighlight';
+import HeroHighlight from '../components/HeroHighlight';
 import downloadPdf from '../utils/downloadPdf';
 import { ReactNode } from 'react';
 

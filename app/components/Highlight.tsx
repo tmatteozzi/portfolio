@@ -1,13 +1,13 @@
 'use client';
 import { cn } from '@/app/utils/cn';
 
-export const Highlight = ({
+export default function Highlight({
   children,
   className
 }: {
   children: React.ReactNode;
   className?: string;
-}) => {
+}) {
   return (
     <span
       className={cn(
@@ -18,4 +18,4 @@ export const Highlight = ({
       {children}
     </span>
   );
-};
+}
