@@ -6,14 +6,17 @@ interface ModalProps {
   isSuccess: boolean;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, isSuccess }) => {
+export default function Modal({ isOpen, onClose, isSuccess }: ModalProps) {
   useEffect(() => {
+    const originalStyle = window.getComputedStyle(document.body).overflow;
+
     if (isOpen) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
+      document.body.style.overflow = 'hidden';
     }
-    return () => document.body.classList.remove('no-scroll');
+
+    return () => {
+      document.body.style.overflow = originalStyle;
+    };
   }, [isOpen]);
 
   if (!isOpen) return null;
@@ -37,7 +40,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, isSuccess }) => {
         </p>
         <div className="flex justify-end">
           <button
-            className="w-full px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition"
+            className="w-full px-4 py-2 bg-indigo-600 text-primary-foreground rounded-md hover:bg-indigo-700 transition"
             onClick={onClose}
           >
             OK
@@ -46,6 +49,4 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, isSuccess }) => {
       </div>
     </div>
   );
-};
-
-export default Modal;
+}
