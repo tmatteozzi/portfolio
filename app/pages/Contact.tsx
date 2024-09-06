@@ -1,8 +1,9 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import Input from '../components/Input';
+import ModalComponent from '../components/Modal';
 
 interface ContactState {
   name: string;
@@ -23,8 +24,10 @@ export default function Contact() {
     message: ''
   });
 
-  const [response, setResponse] = useState<string | null>(null);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -37,7 +40,7 @@ export default function Contact() {
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
 
-    // Check for empty fields
+    // Validación de campos vacíos
     const newErrors: { [key: string]: string } = {};
     Object.entries(formData).forEach(([key, value]) => {
       if (value.trim() === '') {
@@ -54,24 +57,16 @@ export default function Contact() {
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 
-    const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      to_name: 'Tomás Matteozzi',
-      message: formData.message
-    };
-
-    emailjs.send(serviceId, templateId, templateParams, publicKey).then(
-      (response) => {
-        console.log('SUCCESS!', response);
-        setResponse('Message sent!');
+    emailjs.sendForm(serviceId, templateId, formRef.current!, publicKey).then(
+      () => {
+        setIsSuccess(true);
+        setIsModalOpen(true); // Abre el modal en caso de éxito
         setFormData({ name: '', email: '', message: '' });
-        setTimeout(() => {
-          setResponse(null);
-        }, 2000);
       },
       (error) => {
         console.log('FAILED...', error.text);
+        setIsSuccess(false);
+        setIsModalOpen(true); // Abre el modal en caso de error
       }
     );
   };
@@ -87,6 +82,7 @@ export default function Contact() {
         </h1>
         <div className="w-full max-w-6xl">
           <form
+            ref={formRef}
             className="py-4"
             onSubmit={(e) => {
               e.preventDefault();
@@ -125,19 +121,21 @@ export default function Contact() {
                 {...buttonMotionConfig}
                 className="p-[3px] relative"
               >
-                <div className="px-8 py-2 rounded-[6px] border-2 relative group transition duration-200 font-semibold text-white border-gray-300 hover:bg-indigo-950 hover:border-gray-100">
+                <div className="px-8 py-2 rounded-[6px] border relative group transition duration-200 font-semibold text-white border-gray-200 hover:bg-indigo-950 hover:border-gray-100">
                   Send
                 </div>
               </motion.button>
             </div>
-            {response && (
-              <p className="mt-4 text-sm text-gray-200 font-medium">
-                {response}
-              </p>
-            )}
           </form>
         </div>
       </div>
+
+      {/* Modal */}
+      <ModalComponent
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        isSuccess={isSuccess}
+      />
     </section>
   );
 }
