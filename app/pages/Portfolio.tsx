@@ -17,7 +17,7 @@ export default function Portfolio() {
   const content = [
     {
       title: 'Mazzo Developments',
-      link: 'https://google.com',
+      link: 'https://mazzodevelopments.com',
       thumbnail: mazzo.src,
       technologies: [
         {
