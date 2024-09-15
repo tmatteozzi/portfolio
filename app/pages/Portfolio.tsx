@@ -33,6 +33,28 @@ export default function Portfolio() {
           img: NextJSIcon
         }
       ]
+    }
+  ];
+
+  const unusedContent = [
+    {
+      title: 'Mazzo Developments',
+      link: 'https://mazzodevelopments.com',
+      thumbnail: mazzo.src,
+      technologies: [
+        {
+          name: 'React',
+          img: ReactIcon
+        },
+        {
+          name: 'Typescript',
+          img: TypescriptIcon
+        },
+        {
+          name: 'NextJS',
+          img: NextJSIcon
+        }
+      ]
     },
     {
       title: 'Weekly',
