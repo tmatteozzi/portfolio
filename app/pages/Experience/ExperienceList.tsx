@@ -1,4 +1,5 @@
 'use client';
+import SectionContainer from '@/app/components/SectionContainer';
 import Experience, { ExperienceProps } from './Experience';
 import { motion } from 'framer-motion';
 
@@ -33,33 +34,32 @@ export default function ExperienceList() {
   ];
 
   return (
-    <section
-      id="experience-list"
-      className="bg-gray-900 min-h-screen py-16 text-center mx-8"
-    >
-      <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-50 leading-relaxed lg:leading-snug mb-16 mx-auto">
-        Experience
-      </h1>
-      <motion.div
-        className="flex flex-col justify-center items-center gap-8"
-        initial="hidden"
-        animate="visible"
-      >
-        {experiences.map((experience, index) => (
-          <motion.div
-            key={index}
-            variants={itemVariants}
-            className="w-full lg:w-[48%]"
-          >
-            <Experience
-              companyName={experience.companyName}
-              role={experience.role}
-              description={experience.description}
-              duration={experience.duration}
-            />
-          </motion.div>
-        ))}
-      </motion.div>
-    </section>
+    <SectionContainer id="experience-list">
+      <div className="w-full lg:w-[80%] flex flex-col justify-center items-center mx-auto">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-16 ">
+          Experience
+        </h1>
+        <motion.div
+          className="flex flex-col justify-center items-center gap-8"
+          initial="hidden"
+          animate="visible"
+        >
+          {experiences.map((experience, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="w-full lg:w-[60%]"
+            >
+              <Experience
+                companyName={experience.companyName}
+                role={experience.role}
+                description={experience.description}
+                duration={experience.duration}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </SectionContainer>
   );
 }

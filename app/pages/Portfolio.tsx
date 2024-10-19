@@ -12,6 +12,7 @@ import TypescriptIcon from '@/public/icons/typescript.svg';
 import ReactIcon from '@/public/icons/react.svg';
 import NextJSIcon from '@/public/icons/nextjs.svg';
 import AngularIcon from '@/public/icons/angular.svg';
+import SectionContainer from '../components/SectionContainer';
 
 export default function Portfolio() {
   const content = [
@@ -36,107 +37,10 @@ export default function Portfolio() {
     }
   ];
 
-  const unusedContent = [
-    {
-      title: 'Mazzo Developments',
-      link: 'https://mazzodevelopments.com',
-      thumbnail: mazzo.src,
-      technologies: [
-        {
-          name: 'React',
-          img: ReactIcon
-        },
-        {
-          name: 'Typescript',
-          img: TypescriptIcon
-        },
-        {
-          name: 'NextJS',
-          img: NextJSIcon
-        }
-      ]
-    },
-    {
-      title: 'Weekly',
-      link: 'https://google.com',
-      thumbnail: weekly.src,
-      technologies: [
-        {
-          name: 'React',
-          img: ReactIcon
-        },
-        {
-          name: 'JavaScript',
-          img: JavascriptIcon
-        },
-        {
-          name: 'NextJS',
-          img: NextJSIcon
-        }
-      ]
-    },
-    {
-      title: 'Mazzo GCA',
-      link: 'https://google.com',
-      thumbnail: gca.src,
-      technologies: [
-        {
-          name: 'Angular',
-          img: AngularIcon
-        },
-        {
-          name: 'Typescript',
-          img: TypescriptIcon
-        }
-      ]
-    },
-    {
-      title: 'Matteozzi Lavilla',
-      link: 'https://google.com',
-      thumbnail: ml.src,
-      technologies: [
-        {
-          name: 'React',
-          img: ReactIcon
-        },
-        {
-          name: 'Typescript',
-          img: TypescriptIcon
-        },
-        {
-          name: 'NextJS',
-          img: NextJSIcon
-        }
-      ]
-    },
-    {
-      title: 'Team Tasker',
-      link: 'https://google.com',
-      thumbnail: teamtasker.src,
-      technologies: [
-        {
-          name: 'React',
-          img: ReactIcon
-        },
-        {
-          name: 'JavaScript',
-          img: JavascriptIcon
-        },
-        {
-          name: 'NextJS',
-          img: NextJSIcon
-        }
-      ]
-    }
-  ];
-
   return (
-    <section
-      id="portfolio"
-      className="min-h-screen py-16 text-center bg-gray-900 mx-8"
-    >
-      <div className="container mx-auto max-w-6xl">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-50 leading-relaxed lg:leading-snug mb-12 sm:mb-16 mx-auto">
+    <SectionContainer id="portfolio">
+      <div className="mx-auto w-full lg:w-[80%] flex flex-col items-center justify-center">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-16">
           Portfolio
         </h1>
         <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 w-full max-w-6xl">
@@ -181,6 +85,6 @@ export default function Portfolio() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionContainer>
   );
 }

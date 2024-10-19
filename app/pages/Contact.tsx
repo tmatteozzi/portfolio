@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import Input from '../components/Input';
 import ModalComponent from '../components/Modal';
+import SectionContainer from '../components/SectionContainer';
 
 interface ContactState {
   name: string;
@@ -72,15 +73,15 @@ export default function Contact() {
   };
 
   return (
-    <section
+    <SectionContainer
       id="contact"
-      className="pt-16 pb-16 py-4 bg-gradient-to-b from-indigo-950 via-indigo-950 to-gray-900 text-center"
+      className="bg-gradient-to-b from-indigo-950 via-indigo-950 to-gray-900"
     >
-      <div className="flex flex-col justify-center items-center mx-8">
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-relaxed lg:leading-snug mb-8 mx-auto">
+      <div className="w-full lg:w-[80%] flex flex-col justify-center items-center mx-auto">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-16 mx-auto">
           Contact
         </h1>
-        <div className="w-full max-w-6xl">
+        <div className="w-full lg:w-[80%]">
           <form
             ref={formRef}
             className="py-4"
@@ -136,6 +137,6 @@ export default function Contact() {
         onClose={() => setIsModalOpen(false)}
         isSuccess={isSuccess}
       />
-    </section>
+    </SectionContainer>
   );
 }

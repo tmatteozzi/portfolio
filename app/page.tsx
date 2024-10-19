@@ -12,11 +12,11 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 const socialLinks = [
   { url: 'https://github.com/tmatteozzi', icon: <FaGithub size={24} /> },
   {
-    url: 'https://www.linkedin.com/in/tomás-matteozzi-452b3728b',
+    url: 'https://www.linkedin.com/in/tmatteozzi',
     icon: <FaLinkedin size={24} />
   }
 ];
-
+// NAVBAR LINKS
 const navbarLinks = [
   {
     name: 'About',

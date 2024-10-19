@@ -13,6 +13,7 @@ import NextJSIcon from '@/public/icons/nextjs.svg';
 import ViteIcon from '@/public/icons/vite.svg';
 import LinuxIcon from '@/public/icons/linux.svg';
 import AngularIcon from '@/public/icons/angular.svg';
+import SectionContainer from '../components/SectionContainer';
 
 export default function TechStack() {
   const techStack = [
@@ -74,15 +75,15 @@ export default function TechStack() {
   );
 
   return (
-    <section
+    <SectionContainer
       id="tech-stack"
-      className="pt-16 pb-16 bg-gradient-to-b from-gray-900 to-indigo-950 text-center"
+      className="bg-gradient-to-b from-gray-900 to-indigo-950"
     >
-      <div className=" mx-8">
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-relaxed lg:leading-snug mb-16 mx-auto">
+      <div className="w-full lg:w-[80%] flex flex-col items-center mx-auto">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-16">
           Tech Stack
         </h1>
-        <div className="flex sm:flex-row items-center justify-center flex-wrap gap-8 max-w-6xl mx-auto">
+        <div className="flex sm:flex-row items-center justify-center flex-wrap gap-8 w-[80%]">
           {sortedTechStack.map((item, index) => (
             <div
               key={index}
@@ -98,6 +99,6 @@ export default function TechStack() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionContainer>
   );
 }
