@@ -13,6 +13,8 @@ import NextJSIcon from '@/public/icons/nextjs.svg';
 import ViteIcon from '@/public/icons/vite.svg';
 import LinuxIcon from '@/public/icons/linux.svg';
 import AngularIcon from '@/public/icons/angular.svg';
+import ExpoIcon from '@/public/icons/expo.svg';
+
 import SectionContainer from '../components/SectionContainer';
 
 export default function TechStack() {
@@ -44,6 +46,10 @@ export default function TechStack() {
     {
       name: 'Angular',
       img: AngularIcon
+    },
+    {
+      name: 'Expo Go',
+      img: ExpoIcon
     },
     {
       name: 'Vite',
@@ -87,11 +93,11 @@ export default function TechStack() {
           {sortedTechStack.map((item, index) => (
             <div
               key={index}
-              className="w-40 h-36 sm:w-44 sm:h-40 rounded-3xl p-4 shadow-xl border border-gray-300 hover:border-gray-100 flex justify-center items-center transform transition-transform duration-300 hover:scale-105"
+              className="w-40 h-36 sm:w-44 sm:h-40 rounded-3xl p-4 shadow-xl border border-gray-300 flex justify-center items-center transform transition-transform duration-300 hover:scale-105"
             >
               <div className="flex flex-col items-center p-4">
                 <item.img width={80} height={80} />
-                <p className="mt-4 text-sm font-semibold text-white">
+                <p className="mt-4 text-sm font-semibold text-white text-center">
                   {item.name}
                 </p>
               </div>
