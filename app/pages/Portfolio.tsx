@@ -1,10 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 // THUMBNAILS
-import gca from '@/public/projects/gca.png';
 import ml from '@/public/projects/ml.png';
-import teamtasker from '@/public/projects/teamtasker.png';
-import weekly from '@/public/projects/weekly.png';
 import mazzo from '@/public/projects/mazzo.png';
 // ICONS
 import JavascriptIcon from '@/public/icons/javascript.svg';
@@ -35,6 +32,25 @@ export default function Portfolio() {
         }
       ]
     }
+    // {
+    //   title: 'Matteozzi Lavilla',
+    //   link: 'https://mazzodevelopments.com',
+    //   thumbnail: ml.src,
+    //   technologies: [
+    //     {
+    //       name: 'React',
+    //       img: ReactIcon
+    //     },
+    //     {
+    //       name: 'Typescript',
+    //       img: TypescriptIcon
+    //     },
+    //     {
+    //       name: 'NextJS',
+    //       img: NextJSIcon
+    //     }
+    //   ]
+    // }
   ];
 
   return (
@@ -49,7 +65,11 @@ export default function Portfolio() {
               key={index}
               className="border border-gray-300 rounded-2xl overflow-hidden transition duration-300 hover:shadow-xl w-[100%] lg:w-[47.9%] lg:h-[420px]"
             >
-              <Link href={project.link}>
+              <Link
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="p-3">
                   <div className="border border-gray-300 m-2.5 sm:m-3.5 rounded-xl overflow-hidden">
                     <div className="relative h-48 md:h-56 lg:h-64 overflow-hidden">
